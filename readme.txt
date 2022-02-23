@@ -7,7 +7,7 @@ git push -u origin main (Đẩy sources code lên github)
 
 ** 1 số lưu ý:
 - Kiểm tra đang làm việc trên branch nào:
-git checkout
+git branch
 - Chuyển về branch chính hoặc branch muốn làm việc
 git checkout TEN_BRANCH
 - Nếu lỗi không đúng địa chỉ github dùng
