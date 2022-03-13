@@ -1,1 +1,40 @@
-kjsdhjhfsdkhfkjdsfsd
+marquee{
+	background-color: yellow ;
+	border: 5px solid darkblue;
+}
+ul{
+	margin: 0;
+	padding: 0;
+}
+li{
+	width: 200px;
+	height: 20px;
+	text-align: center;
+	background-color: pink;
+}
+a{
+	text-decoration: none;
+}
+.menu ul{
+	list-style: none;
+	background-color: green;
+}
+.menu>ul>li{
+	display: inline-block; /*định dạng sắp xếp theo chiều ngang*/
+
+}
+ul li:last-child{
+	border-right: none;/*Thẻ con cuối cùng trong thanh menu sẽ không có viền phải*/
+}
+ul>li>ul{
+	display: none;
+	position: absolute;
+}
+.menu>ul>li:hover>ul{
+	display: block;
+}
+.menu>ul>li:hover>ul>li{
+	border: 2px solid #F9E368;
+	position: relative;
+	top: 5px;
+}
