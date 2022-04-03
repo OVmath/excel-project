@@ -1,14 +1,20 @@
+*{
+		padding: 0;
+		margin: 0;
+		font-family: 'Itim',cursive;
+		text-align: center;
+		font-weight: bold;
+		box-sizing: border-box;
+		font-size: 25px;
+}
 marquee{
 	background-color: yellow ;
 	border: 5px solid darkblue;
 }
-ul{
-	margin: 0;
-	padding: 0;
-}
+
 li{
 	width: 200px;
-	height: 20px;
+	min-height: 20px;
 	text-align: center;
 	background-color: pink;
 }
@@ -23,18 +29,30 @@ a{
 	display: inline-block; /*định dạng sắp xếp theo chiều ngang*/
 
 }
-ul li:last-child{
-	border-right: none;/*Thẻ con cuối cùng trong thanh menu sẽ không có viền phải*/
+.level1 li{
+		position: relative;
+	}
+.level1 li> .level2{
+	position: absolute;
+	top: 0;
+	left: 100%;
 }
-ul>li>ul{
+.menu-ngang ul{
 	display: none;
 	position: absolute;
 }
-.menu>ul>li:hover>ul{
+.menu-ngang li:hover>ul{
 	display: block;
 }
-.menu>ul>li:hover>ul>li{
+.menu-ngang li:hover>.level1 li{
 	border: 2px solid #F9E368;
-	position: relative;
-	top: 5px;
+	/*position: relative;*/
+}
+.menu-ngang li:hover{
+	background-color: red;
+}
+
+iframe{
+	width: 100%;
+	min-height: 1000px;
 }
