@@ -5,7 +5,7 @@
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <link rel="stylesheet" href="/assets/css/main.css">
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   <script src="/assets/js/main.js"></script>
    <title>Trang chủ</title>
 </head>
 <body>
@@ -25,14 +25,19 @@
       </ul>	  
       <ul class="nav-list">
          <li class="nav-item">
-            <a href="/page/signin.html" class="a1">Đăng kí</a>
+            <a href="/page/signin.html" class="a1" id="user">Đăng kí</a>
          </li>
          <li class="nav-item">
-            <a href="/page/login.html" class="a1">Đăng nhập</a>
+            <a href="/page/login.html" class="a1" id="out" onclick="thoat()">Đăng nhập</a>
          </li>
-      </ul>		
+      </ul>	
+      <script>
+         if(localStorage.getItem('phiendangnhap').value !== ""){
+            document.getElementById('user').innerHTML=localStorage.getItem('phiendangnhap');
+            document.getElementById('user').href="/page/index.html";
+            document.getElementById('out').innerHTML='Đăng xuất';
+         }
+      </script>	
    </div>
-
-   
 </body>
 </html>

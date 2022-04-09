@@ -46,22 +46,14 @@
 			</tr>
 			<tr>
 				<td>Tên đăng nhập:</td>
-				<td> <input type="text" name=""></td>
+				<td> <input type="text" id="tendangki"></td>
 			</tr>
-         <tr>
-            <td>
-               Giới tính:
-            </td>
-            <td>
-               <input type="radio" name="">Nam
-				   <input type="radio" name="">Nữ
-         </tr>
          <tr>
             <td>
                Mật khẩu mới:
             </td>
             <td>
-               <input type="password">
+               <input type="password" id="mk1">
             </td>
          </tr>
          <tr>
@@ -69,13 +61,13 @@
                Nhập lại mật khẩu:
             </td>
             <td>
-               <input type="password">
+               <input type="password" id="mk2">
             </td>
          </tr>
 		</table>
       <div>
          <button type="reset">Reset</button>
-         <button type="submit">Đăng kí</button>
+         <button type="submit" onclick="dangki()">Đăng kí</button>
       </div>
 	</fieldset>
    </form>
