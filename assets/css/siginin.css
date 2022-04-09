@@ -1,0 +1,15 @@
+legend{
+    text-align: center;
+}
+fieldset{
+    padding: 15px;
+}
+form{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+div{
+    display: flex;
+    justify-content: space-evenly;
+}

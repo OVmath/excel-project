@@ -1,0 +1,74 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+ul li{
+    list-style: none;
+}
+.nav{
+    display: flex;
+    justify-content: space-between;
+    background-color: #333740;
+}
+.nav-item{
+    float: left;
+    padding: 0px 10px;
+}
+.a1, .a2, a {
+    list-style: none;
+    text-decoration: none;
+    color: white;
+}
+
+/* CSS cho main-menu */
+.main-menu{
+    display: flex;
+    justify-content: space-between;
+}
+  ul.main-menu {
+    list-style-type: none;
+    overflow: hidden;
+  }  
+  ul.main-menu li {
+    float: left;
+  }
+  #tim-kiem{
+    margin-top: 15px;
+    margin-right: 10px;
+  }
+  ul.main-menu li a, .dropbtn {
+    display: inline-block;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    text-align: center;
+    padding: 16px;
+  }
+  
+  ul.main-menu li a:hover, .dropdown:hover .dropbtn{
+    background-color: white;
+    color: #575a61;
+  }
+  
+  ul.main-menu li.dropdown {
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    width: 98px;
+    border: 1px solid black;
+  }
+  
+  .dropdown-content a {
+    color: #0049CE;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    min-width: 66px;
+  }  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }

@@ -1,76 +1,54 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Học Excel Online</title>
-	<link rel="stylesheet" type="text/css" href="style.css">
-	<link rel="icon" type="image/k-icon" href="Image/excel.png">
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="/assets/css/main.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   <title>Trang chủ</title>
 </head>
 <body>
-	
-	<div>
-		<marquee direction="right" >
-			<h1>Chào mừng các bạn đến với trang web học Excel!</h1>
-		</marquee>
-	</div>
-	<div class="menu">
-		<ul class="menu-ngang">
-			<li><a href="Image_TrangChu.html" target="ndung">Trang chủ</a></li>
-			<li>
-				<a href="">Các bài học</a>
-				<ul class="level1">
-					<li><a href="">Nhập môn Excel</a>
-						<ul class="level2">
-							<li><a href="">Bài 1 - Ribbon trong Excel</a></li>
-							<li><a href="">Bài 2 - Thao tác với bảng tính trong Excel</a></li>
-							<li><a href="">Bài 3 - Các thành phần của bảng tính Excel</a></li>
-							<li><a href="">Bài 4 - Nhập dữ liệu</a></li>
-							<li><a href="">Bài 5 - Nhập công thức</a></li>
-						</ul>
-					</li>
-					<li><a href="">Excel cơ bản</a>
-						<ul class="level2">
-							<li><a href="">Bài 6 - Các kiểu dữ liệu trong Excel</a></li>
-							<li><a href="">Bài 7 - Các hàm xử lý dữ liệu ngày tháng, thời gian trong Excel</a></li>
-							<li><a href="">Bài 8 - Lọc dữ liệu AutoFilter trong Excel</a></li>
-							<li><a href="">Bài 9 - Hàm trong Excel</a></li>
-							
-						</ul>
-					</li>
-					<li><a href="">Kiến thức nâng cao</a>
-						<ul class="level2">
-							<li><a href="">Bài 10 - Nhóm hàm tra cứu trong Excel</a></li>
-							<li><a href="">Bài 11 - Nhóm hàm thống kê trong Excel</a></li>
-							<li><a href="">Bài 12 - Pivot Table trong Excel</a></li>
-							<li><a href="">Bài 13 - Vẽ đồ thị trong Excel</a></li>
-							<li><a href="">Bài 14 - In ấn trong Excel</a></li>
-							<li><a href="">Bài 15 - Định dạng dữ liệu có điều kiện</a></li>
-						</ul>
-					</li>
-				</ul>
-			</li>
-			<li>
-				<a href="">Tham khảo</a>
-				<ul class="level1">
-					<li>
-						<a href="">
-							Video youtube
-						</a>
-					</li>
-					<li>
-						<a href="">
-							Tài liệu sách - bài viết
-						</a>
-					</li>
-				</ul>
-			</li>
-			<li><a href="">Đăng kí</a></li>
-			<li><a href="">Đăng nhập</a></li>
-		</ul>
-	</div>
-	<div>
-		<iframe src="" name="ndung" id="content"></iframe>
-	</div>
+   <div class="nav">
+      <ul class="nav-list">
+         <ul class="nav-list">
+            <li class="nav-item">
+               <a href="/page/trang_chu.html" class="a1">Trang chủ</a>
+            </li>
+            <li class="nav-item">
+               <a href="/page//gioi_thieu.html" class="a1">Giới thiệu</a>
+            </li>
+            <li class="nav-item">
+               <a href="/page/" class="a1">Liên hệ</a>
+            </li>
+         </ul>
+      </ul>	  
+      <ul class="nav-list">
+         <li class="nav-item">
+            <a href="/page/signin.html" class="a1">Đăng kí</a>
+         </li>
+         <li class="nav-item">
+            <a href="/page/login.html" class="a1">Đăng nhập</a>
+         </li>
+      </ul>		
+   </div>
+
+   <div class="main-menu">
+	   <div></div>
+			<ul class="main-menu">
+				<li><a href="index.html">Trang chủ</a></li>
+				<li class="dropdown">
+					<a href="/page/bai_viet.html" class="dropbtn">Danh mục</a>
+					<div class="dropdown-content">
+					  <a href="/page/bai_viet.html">Cơ bản</a>
+					  <a href="/page/bai_viet.html">Nâng cao</a>
+					</div>
+				  </li>	
+				  <li><a href="/page/bai_viet.html">Bài viết</a></li>		
+			  </ul>
+           <div id="tim-kiem">
+               <input type="text"><button>Tìm kiếm</button>
+           </div>
+   </div>  
 </body>
 </html>
