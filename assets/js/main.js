@@ -11,7 +11,6 @@ function dangki(){
         localStorage.setItem(id, mk2);
         window.location="/page/login.html";
         alert('Đăng kí thành công!');
-    
     } 
 }
 function dangnhap(){
