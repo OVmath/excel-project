@@ -5,7 +5,9 @@
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <link rel="stylesheet" href="/assets/css/main.css">
+   <link rel="stylesheet" href="/assets/css/setting.css">
    <script src="/assets/js/main.js"></script>
+   <script src="/assets/js/phanquyen.js"></script>
    <title>Trang chủ</title>
 </head>
 <body>
@@ -36,23 +38,17 @@
          </li>
       </ul>		
    </div>
-
-   <div class="main-menu">
-	   <div></div>
-			<ul class="main-menu">
-				<li><a href="/page/trang_chu.html">Trang chủ</a></li>
-				<li class="dropdown">
-					<a href="/page/bai_viet.html" class="dropbtn">Danh mục</a>
-					<div class="dropdown-content">
-					  <a href="/page/bai_viet.html">Cơ bản</a>
-					  <a href="/page/bai_viet.html">Nâng cao</a>
-					</div>
-				  </li>	
-				  <li><a href="/page/bai_viet.html">Bài viết</a></li>		
-			  </ul>
-           <div id="tim-kiem">
-               <input type="text"><button>Tìm kiếm</button>
-           </div>
-   </div>  
+   
+   <div>
+      <b>Danh sách USER</b>
+      <table id="dsuser" border="1px">         
+         <script>
+            if(localStorage.getItem("phiendangnhap")=='Admin'){
+               var html = listuser();
+             document.getElementById("dsuser").innerHTML=html;   
+            }                    
+         </script>
+      </table>
+   </div>
 </body>
 </html>

@@ -1,14 +1,13 @@
+var listid;
 function dangki(){
     var id = document.getElementById('tendangki').value;    
     var mk1 = document.getElementById('mk1').value;   
-    var mk2 = document.getElementById('mk2').value;
-    var listid;
-    
+    var mk2 = document.getElementById('mk2').value;    
     if(localStorage.getItem('listid')){
         listid = JSON.parse(localStorage.getItem('listid'));
     }else{
         listid = [];
-    }   
+    }  
         if(mk1 !== mk2){
             alert('Mật khẩu không khớp!\nVui lòng kiểm tra lại mật khẩu!')
         }
@@ -16,24 +15,29 @@ function dangki(){
             alert(checkdk())
         }
         if(checkdk()==="" && mk1 === mk2){
-            listid.push(id);
-            localStorage.setItem(id, mk2);
             window.location="/page/login.html";
-            localStorage.setItem('listid',JSON.stringify(listid));
             alert('Đăng kí thành công!');
-        }
+            adduser(id,mk2,dem); 
+            addlist(id);
+        }       
     }
+function adduser(id,mk){    
+            localStorage.setItem(id,mk);    
+}
+function addlist(id){
+    listid.push(id);
+            localStorage.setItem('listid',JSON.stringify(listid));  
+}
 function dangnhap(){
     var id = document.getElementById('iddangnhap').value;
     var mk = document.getElementById('mkdangnhap').value;
     var mkdadangki = localStorage.getItem(id);
-    if( mkdadangki !== mk){
-        alert('Đăng nhập không thành công!\nVui lòng kiểm tra lại thông tin đăng nhập!')
-    }
-    else{
+    if(id === 'Admin' && mk === 'nghia@123'|| mkdadangki === mk){
         window.location="/page/trang_ca_nhan.html";
         alert('Đăng nhập thành công!');
         localStorage.setItem('phiendangnhap',id)
+    }else{
+        alert('Đăng nhập không thành công!\nVui lòng kiểm tra lại thông tin đăng nhập!')
     }
 }
 function thoat(){

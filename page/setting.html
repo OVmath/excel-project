@@ -5,7 +5,9 @@
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <link rel="stylesheet" href="/assets/css/main.css">
+   <link rel="stylesheet" href="/assets/css/setting.css">
    <script src="/assets/js/main.js"></script>
+   <script src="/assets/js/phanquyen.js"></script>
    <title>Trang chủ</title>
 </head>
 <body>
@@ -38,6 +40,15 @@
             document.getElementById('out').innerHTML='Đăng xuất';
          }
       </script>	
+   </div>
+   <div>
+      <b>Danh sách USER</b>
+      <table id="dsuser" border="1px">         
+         <script>
+            var html = listuser();
+             document.getElementById("dsuser").innerHTML=html;           
+         </script>
+      </table>
    </div>
 </body>
 </html>
