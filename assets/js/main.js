@@ -1,18 +1,28 @@
 function dangki(){
-    var id = document.getElementById('tendangki').value;
-    
-    var mk1 = document.getElementById('mk1').value;
-   
+    var id = document.getElementById('tendangki').value;    
+    var mk1 = document.getElementById('mk1').value;   
     var mk2 = document.getElementById('mk2').value;
-   
-    if(mk1 !== mk2){
-        alert('Mật khẩu không khớp!\nVui lòng kiểm tra lại mật khẩu!')
+    var listid;
+    
+    if(localStorage.getItem('listid')){
+        listid = JSON.parse(localStorage.getItem('listid'));
     }else{
-        localStorage.setItem(id, mk2);
-        window.location="/page/login.html";
-        alert('Đăng kí thành công!');
-    } 
-}
+        listid = [];
+    }   
+        if(mk1 !== mk2){
+            alert('Mật khẩu không khớp!\nVui lòng kiểm tra lại mật khẩu!')
+        }
+        if(checkdk() !== ""){
+            alert(checkdk())
+        }
+        if(checkdk()==="" && mk1 === mk2){
+            listid.push(id);
+            localStorage.setItem(id, mk2);
+            window.location="/page/login.html";
+            localStorage.setItem('listid',JSON.stringify(listid));
+            alert('Đăng kí thành công!');
+        }
+    }
 function dangnhap(){
     var id = document.getElementById('iddangnhap').value;
     var mk = document.getElementById('mkdangnhap').value;
@@ -28,4 +38,19 @@ function dangnhap(){
 }
 function thoat(){
     localStorage.removeItem('phiendangnhap');
+}
+function checkdk(){
+    var id = document.getElementById('tendangki').value;  
+    if(localStorage.getItem('listid')){
+        listid = JSON.parse(localStorage.getItem('listid'));
+    }else{
+        listid = [];
+    }
+    var checkid = "";
+    for(var i = 0; i < listid.length;i++){
+        if(id === listid[i]){
+           checkid = "Tên đăng nhập đã tồn tại!\nVui lòng nhập tên khác!";
+        } 
+    } 
+    return checkid;
 }
