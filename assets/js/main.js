@@ -17,7 +17,7 @@ function dangki(){
         if(checkdk()==="" && mk1 === mk2){
             window.location="/page/login.html";
             alert('Đăng kí thành công!');
-            adduser(id,mk2,dem); 
+            adduser(id,mk2); 
             addlist(id);
         }       
     }

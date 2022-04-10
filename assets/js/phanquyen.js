@@ -1,7 +1,6 @@
 
 function listadmin(){
-    document.getElementById("setting").innerHTML=12;
-
+    
 }
 function listuser(){ 
     if(localStorage.getItem('listid')){
