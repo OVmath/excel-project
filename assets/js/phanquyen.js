@@ -64,7 +64,7 @@ function listuser(){
     }else{
         listid = [];
     }
-    var tb = "<tr><td colspan="+4+">Danh sách User</td></tr> <tr><td>STT</td><td>Tên đăng nhập</td><td>Phân quyền</td><td>Chức vụ hiên tại</td></tr>";
+    var tb = "<tr><td colspan="+4+">Danh sách User ("+listid.length+" thành viên)</td></tr> <tr><td>STT</td><td>Tên đăng nhập</td><td>Phân quyền</td><td>Chức vụ hiên tại</td></tr>";
     var o1 = '<option>Admin</option>';
     var o2 = '<option>Biên tập viên</option>';
     var o3 = '<option>User</option>'
