@@ -14,12 +14,10 @@ function ktraadmin(){
     }else{
         listadmin = [];
     }
-    var kt;
+    var kt =0;
     for(var n = 0; n < listadmin.length; n++){
-        if (localStorage.getItem("phiendangnhap") === listadmin[n]) {
-            kt = '1'
-        }else{
-            kt = '0'
+        if (localStorage.getItem("phiendangnhap") == listadmin[n]) {
+            kt +=1;
         }
     }
     return kt;
@@ -30,12 +28,10 @@ function ktrabtv(){
     }else{
         listbtv = [];
     }  
-    var kt;
+    var kt = 0;
     for(var m = 0; m < listbtv.length; m++){
         if (localStorage.getItem("phiendangnhap") === listbtv[m]) {
-            kt = '1'
-        }else{
-            kt = '0'
+            kt +=1;
         }
     }
     return kt;
@@ -47,12 +43,10 @@ function ktrauser(){
     }else{
         listuser = [];
     }
-    var kt;
+    var kt = 0;
     for(var m = 0; m < listuser.length; m++){
         if (localStorage.getItem("phiendangnhap") === listuser[m]) {
-            kt = '1'
-        }else{
-            kt = '0'
+            kt +=1
         }
     }
     return kt;
