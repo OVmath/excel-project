@@ -9,6 +9,7 @@
    <script src="/assets/js/main.js"></script>
    <script src="/assets/js/phanquyen.js"></script>
    <script src="/assets/js/canhan.js"></script>
+   <script src="/assets/js/baiviet.js"></script>
    <title>Trang chủ</title>
 </head>
 <body>
@@ -59,5 +60,25 @@
                <input type="text"><button>Tìm kiếm</button>
            </div>
    </div>
+   <form action="">
+       <table>
+           <tr>
+               <td>Nội dung</td>
+               <td></td>
+           </tr>
+           <tr>
+               <td>
+                   <textarea  id="noidung" cols="180" rows="10"></textarea>
+               </td>
+               <td><button onclick="thembaiviet()">Đăng bài</button></td>
+           </tr>
+       </table>
+   </form>
+   <table id="dsuser" border="1px">
+    <script>
+          var html = dsbv();
+        document.getElementById("dsuser").innerHTML=html              
+    </script>
+ </table>
 </body>
 </html>
