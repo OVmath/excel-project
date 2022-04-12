@@ -36,19 +36,48 @@
       <script>
          if(localStorage.getItem('phiendangnhap').value !== ""){
             document.getElementById('user').innerHTML=localStorage.getItem('phiendangnhap');
-            document.getElementById('user').href="/page/index.html";
+            document.getElementById('user').href="/page/trang_ca_nhan.html";
             document.getElementById('out').innerHTML='Đăng xuất';
          }
       </script>	
    </div>
-   <div>
-      <b>Danh sách USER</b>
-      <table id="dsuser" border="1px">         
+</div>  
+<div class="main-menu">
+   <ul class="main-menu">
+      <li><a href="../page/trang_ca_nhan.html">Thông tin cá nhân</a></li>
+      <li class="dropdown">
+         <a href="../page/lichsuuser.html" class="dropbtn">Lịch sử</a>
+        </li>		
+        <li id="canhan">
          <script>
-            var html = listuser();
-             document.getElementById("dsuser").innerHTML=html;           
+            if(localStorage.getItem("phiendangnhap")=='Admin' || ktraadmin()=='1' || ktrabtv() == '1'){
+               document.getElementById("canhan").innerHTML='<a href="/page/trangdangbaiviet.html">Quản lí bài viết</a>';
+            }
          </script>
-      </table>
-   </div>
+      </li>
+      <li><a href="../page/setting.html">Cài đặt</a></li>	
+     </ul>
+     <div id="tim-kiem">
+         <input type="text"><button>Tìm kiếm</button>
+     </div>
+</div>
+<table id="dsuser" border="1px">
+   <script>
+       
+      if(localStorage.getItem("phiendangnhap")=='Admin' || ktraadmin()=='1'){
+        
+         var html = listuser();
+       document.getElementById("dsuser").innerHTML=html;
+      }                 
+   </script>
+</table>
+<table id="qlbaiviet" border="1px">
+   <script>
+      if(localStorage.getItem("phiendangnhap")=='Admin' || ktraadmin()=='1' || ktrabtv() == '1'){
+         
+      }
+   </script>
+</table>
+</div>
 </body>
 </html>

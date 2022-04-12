@@ -71,3 +71,6 @@ function checkdk(){
     } 
     return checkid;
 }
+function test(){
+    alert('hello')
+}

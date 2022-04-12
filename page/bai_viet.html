@@ -6,6 +6,7 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <link rel="stylesheet" href="/assets/css/main.css">
    <script src="/assets/js/main.js"></script>
+   <script src="/assets/js/phanquyen.js"></script>
    <title>Trang chủ</title>
 </head>
 <body>
@@ -34,7 +35,7 @@
       <script>
          if(localStorage.getItem('phiendangnhap').value !== ""){
             document.getElementById('user').innerHTML=localStorage.getItem('phiendangnhap');
-            document.getElementById('user').href="/page/index.html";
+            document.getElementById('user').href="/page/trang_ca_nhan.html";
             document.getElementById('out').innerHTML='Đăng xuất';
          }
       </script>	
@@ -50,7 +51,14 @@
 					  <a href="/page/bai_viet.html">Nâng cao</a>
 					</div>
 				  </li>	
-				  <li><a href="/page/bai_viet.html">Bài viết</a></li>		
+				  <li><a href="/page/bai_viet.html">Bài viết</a></li>
+              <li id="canhan">
+                 <script>
+                    if(localStorage.getItem("phiendangnhap")=='Admin' || ktraadmin()=='1' || ktrabtv() == '1' || ktrauser() == '1'){
+                       document.getElementById("canhan").innerHTML='<a href="/page/trang_ca_nhan.html">Trang cá nhân</a>';
+                    }
+                 </script>
+              </li>			
 			  </ul>
            <div id="tim-kiem">
                <input type="text"><button>Tìm kiếm</button>
