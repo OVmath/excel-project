@@ -46,7 +46,7 @@ function dangnhap(){
     var mk = document.getElementById('mkdangnhap').value;
     var mkdadangki = localStorage.getItem(id);
     if(id === 'Admin' && mk === 'nghia@123'|| mkdadangki === mk){
-        window.location="/page/trang_ca_nhan.html";
+        window.location="../page/trang_ca_nhan.html";
         alert('Đăng nhập thành công!');
         localStorage.setItem('phiendangnhap',id)
     }else{
