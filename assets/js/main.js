@@ -19,6 +19,8 @@ function dangki(){
             alert('Đăng kí thành công!');
             adduser(id,mk2); 
             addlist(id);
+            addlistuser(id);
+            
         }       
     }
 function adduser(id,mk){    
@@ -28,6 +30,17 @@ function addlist(id){
     listid.push(id);
             localStorage.setItem('listid',JSON.stringify(listid));  
 }
+function addlistuser(id){
+    var listuser;
+    if(localStorage.getItem('listuser')){
+        listuser = JSON.parse(localStorage.getItem('listuser'));
+    }else{
+        listuser = [];
+    }
+    listuser.push(id);
+            localStorage.setItem('listuser',JSON.stringify(listuser));  
+}
+
 function dangnhap(){
     var id = document.getElementById('iddangnhap').value;
     var mk = document.getElementById('mkdangnhap').value;

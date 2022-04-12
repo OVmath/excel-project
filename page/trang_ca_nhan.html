@@ -42,7 +42,9 @@
    <div align="center">
       <table id="dsuser" border="1px">
          <script>
+             
             if(localStorage.getItem("phiendangnhap")=='Admin' || ktraadmin()=='1'){
+              
                var html = listuser();
              document.getElementById("dsuser").innerHTML=html;  
             }                 
