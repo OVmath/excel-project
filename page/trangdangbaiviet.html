@@ -70,6 +70,25 @@
                </td>
            </tr>
            <tr>
+            <td class="td">Hình ảnh</td>
+            <td>
+               <input type="file" id="myFileInput" onchange="hienanh(event)">
+               <img id="output" style="margin-bottom: -22px;" onclick="xemtoanh()"/>
+               <script>
+         document.querySelector("#myFileInput").addEventListener("change", function (){
+        // console.log(this.files);
+        var tieude = document.getElementById('tieude').value;
+        const reader = new FileReader();
+        reader.addEventListener("load", () => {
+            console.log(reader.result);
+            localStorage.setItem(tieude+'a', reader.result);
+        });
+        reader.readAsDataURL(this.files[0]);
+    });
+               </script>
+            </td>
+        </tr>
+           <tr>
               <td>Nội dung</td>
                <td rowspan="2">
                   <textarea id="noidung" placeholder="Nhập nội dung bài viết vào đây..." required="required"></textarea>

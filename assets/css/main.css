@@ -78,7 +78,10 @@ ul li{
     box-sizing: border-box;
   }
   table{
-    width: 100%;
+    margin: auto;
+    width: 90%;
+    margin-left: 50px;
+    margin-right: 50px;
   }
 .td{
   width: 5%;
@@ -88,4 +91,8 @@ textarea{
   padding: 25px 20px;
   box-sizing: border-box;
   
+}
+.baiviet{
+  text-align: left;
+  border: none;
 }

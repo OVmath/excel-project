@@ -40,7 +40,6 @@ function addlistuser(id){
     listuser.push(id);
             localStorage.setItem('listuser',JSON.stringify(listuser));  
 }
-
 function dangnhap(){
     var id = document.getElementById('iddangnhap').value;
     var mk = document.getElementById('mkdangnhap').value;
