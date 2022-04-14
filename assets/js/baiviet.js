@@ -1,5 +1,6 @@
 var listbv;
 var listnd;
+localStorage.setItem('listbv','["1"]')
 function thembaiviet(){
     var tieude = document.getElementById('tieude').value;  
     var noidung = document.getElementById('noidung').value;     
