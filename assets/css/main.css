@@ -97,3 +97,10 @@ textarea{
   text-align: left;
   border: none;
 }
+.dropdown-content ul li:hover a{
+    background-color: red;
+}
+
+.dropdown-content>ul > li{
+    border: 1px solid yellow;
+}

@@ -155,7 +155,7 @@ function phanadmin(i){
             localStorage.setItem('listadmin',JSON.stringify(listadmin)); 
             alert('Đã loại bỏ '+ idremove + ' ra khỏi danh sách Admin');
         }
-        window.location="../page/setting.html";
+        window.location="../../page/setting.html";
         
     }
     
@@ -192,7 +192,7 @@ function phanbtv(i){
             localStorage.setItem('listbtv',JSON.stringify(listbtv)); 
             alert('Đã loại bỏ '+ idremove + ' ra khỏi danh sách Biên tập viên');
         }
-        window.location="../page/setting.html";
+        window.location="../../page/setting.html";
         
     }
     
@@ -229,7 +229,7 @@ function phanuser(i){
             localStorage.setItem('listuser',JSON.stringify(listuser)); 
             alert('Đã loại bỏ '+ idremove + ' ra khỏi danh sách User');
         }
-        window.location="../page/setting.html";
+        window.location="../../page/setting.html";
         
     }
     
