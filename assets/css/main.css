@@ -97,10 +97,31 @@ textarea{
   text-align: left;
   border: none;
 }
-.dropdown-content ul li:hover a{
-    background-color: red;
+/*Thêm*/
+.dropdown-content>ul>li:hover>a{
+    background-color: red;          /*Thêm hiệu ứng khi hover vào menu đổ xuống*/
 }
 
 .dropdown-content>ul > li{
-    border: 1px solid yellow;
+    border: 1px solid black;  /*Thêm đường viền cho menu đổ xuống*/
+}
+/*Menu cấp 2
+*/
+.level2{
+  position: relative;
+}
+.level2>ul{
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 100%;
+}
+.level2:hover>ul{
+  display: block;
+}
+.level2>ul>li{
+  border: 1px solid black;
+}
+.level2 ul li:hover a{
+  background-color: red;
 }
