@@ -7,7 +7,114 @@ var lancs = {
     user: "",
     thoigian: "",
 }
+var cb1;
+var cb2;
+var cb3;
+var nc1;
+var nc2;
+var nc3;
 
+function t(){
+    var check = '';
+    if(localStorage.getItem('listbv')){
+        listbv = JSON.parse(localStorage.getItem('listbv'));
+    }else{
+        listbv = [];
+    }
+    if(localStorage.getItem('listcongkhai')){
+        listcongkhai = JSON.parse(localStorage.getItem('listcongkhai'));
+    }else{
+        listcongkhai = [];
+    }
+    alert(listbv[0] +listbvcongkhai[0])
+    for(var a = 0; a < listbvcongkhai.length; a++){
+        if (localStorage.getItem(listbv[0]) === listbvcongkhai[a]) {
+            check = 'Công khai';
+            alert(check)
+        }
+    }
+    
+}
+function thuockhoahoc(i){
+    var check = '';
+    if(localStorage.getItem('listbv')){
+        listbv = JSON.parse(localStorage.getItem('listbv'));
+    }else{
+        listbv = [];
+    }
+    if(localStorage.getItem('listcongkhai')){
+        listcongkhai = JSON.parse(localStorage.getItem('listcongkhai'));
+    }else{
+        listcongkhai = [];
+    }
+    for(var a = 0; a < listcongkhai.length; a++){
+        if (listbv[i] === listcongkhai[a]) {
+            check = 'Công khai';
+        }
+    }
+    if(localStorage.getItem('listcb1')){
+        listcb1 = JSON.parse(localStorage.getItem('listcb1'));
+    }else{
+        listcb1 = [];
+    }
+    for(var a = 0; a < listcb1.length; a++){
+        if (listbv[i] === listcb1[a]) {
+            check = 'Cơ bản 1';
+        }
+    }
+    if(localStorage.getItem('listcb2')){
+        listcb2 = JSON.parse(localStorage.getItem('listcb2'));
+    }else{
+        listcb2 = [];
+    }
+    for(var b = 0; b < listcb2.length; b++)
+        if (listbv[i] === listcb2[b]) {
+            check = 'Cơ bản 2';
+        }
+    
+    if(localStorage.getItem('listcb3')){
+        listcb3 = JSON.parse(localStorage.getItem('listcb3'));
+    }else{
+        listcb3 = [];
+    }
+    for(var c = 0; c < listcb3.length; c++){
+        if (listbv[i] === listcb3[c]) {
+            check = 'Cơ bản 3';
+        }
+    }
+    if(localStorage.getItem('listnc1')){
+        listnc1 = JSON.parse(localStorage.getItem('listnc1'));
+    }else{
+        listnc1 = [];
+    }
+    for(var d = 0; d < listnc1.length; d++){
+        if (listbv[i] === listnc1[d]) {
+            check = 'Nâng cao 1';
+        }
+    }
+    if(localStorage.getItem('listnc2')){
+        listnc2 = JSON.parse(localStorage.getItem('listnc2'));
+    }else{
+        listnc2 = [];
+    }
+    for(var e = 0; e < listnc2.length; e++){
+        if (listbv[i] === listnc2[e]) {
+            check = 'Nâng cao 2';
+        }
+    }
+    if(localStorage.getItem('listnc3')){
+        listnc3 = JSON.parse(localStorage.getItem('listnc3'));
+    }else{
+        listnc3 = [];
+    }
+    for(var f = 0; f < listnc3.length; f++){
+        if (listbv[i] === listnc3[f]) {
+            check = 'Nâng cao 3';
+        }
+    }
+    
+    return check;
+}
 function bvmd(){
     var b1 = 'Cách Ẩn cột, dòng và Group cột, dòng trong excel nhanh nhất';
     var b2 = '4 cách làm tròn số trong excel';
@@ -148,11 +255,7 @@ function thembaiviet(){
     }else{
         alert('Đăng bài thất bại!')
     }
-    return tt;
     
-}
-function tt(){
-    alert(thembaiviet())
 }
 var listcongkhai;
 function listbvcongkhai(id){
@@ -192,10 +295,10 @@ function dsbv(){
     }else{
         listbv = [];
     } 
-    var tb = "<tr><td colspan="+5+">Danh sách Bài viết ("+listbv.length+" bài)</td></tr><tr><td>STT</td><td>Tiêu đề</td><td>Hình ảnh</td><td>Nội dung</td><td>Hành động</td></tr>";
+    var tb = "<tr><td colspan="+5+">Danh sách Bài viết ("+listbv.length+" bài)</td></tr><tr><td>STT</td><td>Tiêu đề</td><td>Hình ảnh</td><td>Nội dung</td><td>Hành động</td><td>Thuộc khóa học</td></tr>";
     for(var i = 0; i < listbv.length;i++){
         var anh = listbv[i] + 'a';
-       var row = '<tr><td>'+(i+1)+'</td><td>'+listbv[i]+'</td><td><img src="'+hienthi(anh)+'" style="width: 50px" alt="Preview" id="imgPreview" ></td><td>'+localStorage.getItem(listbv[i])+'</td><td><div id=\'l'+i+'\' onchange=\'chinhsua('+i+')\'>'+sapxepaction(i)+'</div></td></tr>';
+       var row = '<tr><td>'+(i+1)+'</td><td>'+listbv[i]+'</td><td><img src="'+hienthi(anh)+'" style="width: 50px" alt="Preview" id="imgPreview" ></td><td>'+localStorage.getItem(listbv[i])+'</td><td><div id=\'l'+i+'\' onchange=\'chinhsua('+i+')\'>'+sapxepaction(i)+'</div></td><td>'+thuockhoahoc(i)+'</td></tr>';
        tb += row;
     }
     return tb;
@@ -309,7 +412,9 @@ function khoiphuc(tieude){
     }else{
         listcs = [];
     }
-    alert('Khôi phục bài viết thành công!')
+    if(tieude !== ""){
+        alert('Khôi phục bài viết thành công!')
+    }
     var vt = listcs.length -1;
     // alert(listcs[vt].noidung)
     addbv(tieude,listcs[vt].noidung)

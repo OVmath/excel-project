@@ -5,6 +5,10 @@ function ktraphiendangnhap(){
          false;
      }
 }
+function te(){
+    alert(document.getElementById('khoahoc').value)
+}
+
 function ktraadmin(){
     if(localStorage.getItem('listadmin')){
         listadmin = JSON.parse(localStorage.getItem('listadmin'));

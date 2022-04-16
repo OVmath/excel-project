@@ -5,10 +5,24 @@ function thongtincanhan(){
     var mk = '<td>Mật khẩu</td><td>'+localStorage.getItem(ten)+'</td>'
     var dadoc = '<td>Khóa học</td><td></td>'
     var level = '<td>Level</td><td></td>'
+    var vaitro = '<td>Vai trò trên trang</td><td>'+vattro()+'</td>'
     var doitt = '<td><button onclick="chuyentrangdoimatkhau()">Đổi thông tin</button></td><td></td>'
-    tb = '<tr>'+id+'</tr>'+'<tr>'+mk+'</tr>'+'<tr>'+dadoc+'</tr>'+'<tr>'+level+'</tr>'+'<tr>'+doitt+'</tr>'
+    tb = '<tr>'+id+'</tr>'+'<tr>'+mk+'</tr>'+'<tr>'+dadoc+'</tr>'+'<tr>'+level+'</tr>'+'<tr>'+vaitro+'</tr>'+'<tr>'+doitt+'</tr>'
     return tb;
 
+}
+function vattro(){
+    var vt = ''
+    if(ktraadmin()=='1' || localStorage.getItem("phiendangnhap")=='Admin' ){
+        vt = 'Admin'
+    }
+    if(ktrabtv()=='1'){
+        vt = 'Biên tập viên'
+    }
+    if(ktrauser()=='1'){
+        vt = 'User'
+    }
+    return vt;
 }
 function chuyentrangdoimatkhau(){
     window.location="/page/doimatkhau.html"
