@@ -13,3 +13,4 @@ function thongtincanhan(){
 function chuyentrangdoimatkhau(){
     window.location="/page/doimatkhau.html"
 }
+
