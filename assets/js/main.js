@@ -23,6 +23,31 @@ function dangki(){
             
         }       
     }
+function doimatkhau(){
+        var id = document.getElementById('tendangki').value;    
+        var mk1 = document.getElementById('mk1').value;   
+        var mk2 = document.getElementById('mk2').value;   
+        var mk = document.getElementById('mkdangnhap').value;
+        var mkdadangki = localStorage.getItem(id); 
+        if(localStorage.getItem('listid')){
+            listid = JSON.parse(localStorage.getItem('listid'));
+        }else{
+            listid = [];
+        }  
+        if(mk !== mkdadangki){
+            alert('Mật khẩu không đúng!\nVui lòng kiểm tra lại mật khẩu!')
+        }
+        if(mk1 !== mk2){
+                alert('Mật khẩu mới không khớp!\nVui lòng kiểm tra lại mật khẩu!')
+        }
+        if(mk1 === mk2 && mk === mkdadangki){
+                window.location="../page/login.html";
+                alert('Đổi mật khẩu thành công!');
+                adduser(id,mk2); 
+        }
+                
+                 
+    }
 function adduser(id,mk){    
             localStorage.setItem(id,mk);    
 }

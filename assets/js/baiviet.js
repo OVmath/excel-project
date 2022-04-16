@@ -172,10 +172,10 @@ function dsbv(){
     }else{
         listbv = [];
     } 
-    var tb = "<tr><td colspan="+4+">Danh sách Bài viết ("+listbv.length+" bài)</td></tr><tr><td>STT</td><td>Tiêu đề</td><td>Hình ảnh</td><td>Nội dung</td></tr>";
+    var tb = "<tr><td colspan="+5+">Danh sách Bài viết ("+listbv.length+" bài)</td></tr><tr><td>STT</td><td>Tiêu đề</td><td>Hình ảnh</td><td>Nội dung</td><td>Hành động</td></tr>";
     for(var i = 0; i < listbv.length;i++){
         var anh = listbv[i] + 'a';
-       var row = '<tr><td>'+(i+1)+'</td><td>'+listbv[i]+'</td><td><img src="'+hienthi(anh)+'" style="width: 50px" alt="Preview" id="imgPreview" ></td><td>'+localStorage.getItem(listbv[i])+'</td></tr>';
+       var row = '<tr><td>'+(i+1)+'</td><td>'+listbv[i]+'</td><td><img src="'+hienthi(anh)+'" style="width: 50px" alt="Preview" id="imgPreview" ></td><td>'+localStorage.getItem(listbv[i])+'</td><td><div id=\'l'+i+'\' onchange=\'chinhsua('+i+')\'>'+sapxepaction(i)+'</div></td></tr>';
        tb += row;
     }
     return tb;
@@ -249,7 +249,50 @@ function hienanh(event) {
 //     localStorage.setItem(tieude+'a','/image/'+a.files[0].name)
     
 // }
-function gop(){
-    hienanh(event);
-    luuanh();
+function sapxepaction(i){
+    var lc = '';
+    var o1 = '<button type="button" onclick="chinhsua(\''+i+'\')">Chỉnh sửa</button>';
+    var o2 = '<button type="button" onclick="xoa(\''+i+'\')">Xóa</button>';
+        lc = o1 + o2;
+    return lc;    
 }
+function chinhsua(i){
+    if(localStorage.getItem('listbv')){
+        listbv = JSON.parse(localStorage.getItem('listbv'));
+    }else{
+        listbv = [];
+    } 
+        document.getElementById('tieude').value=listbv[i];
+        document.getElementById('noidung').value=localStorage.getItem(listbv[i]);
+        document.getElementById('formbv').innerText='Chỉnh sửa bài viết';
+        location.href="#formbv"
+        
+} 
+function xoa(i){
+    if(localStorage.getItem('listha')){
+        listha = JSON.parse(localStorage.getItem('listha'));
+    }else{
+        listha = [];
+    }
+
+    xoalistbv(i);
+    window.location="../../page/trangdangbaiviet.html";
+    if(localStorage.getItem('listcongkhai')){
+        listcongkhai = JSON.parse(localStorage.getItem('listcongkhai'));
+    }else{
+        listcongkhai = [];
+    }
+}
+function xoalistbv(i){
+    if(localStorage.getItem('listbv')){
+        listbv = JSON.parse(localStorage.getItem('listbv'));
+    }else{
+        listbv = [];
+    }
+        var idremove = listbv[i];
+        listbv = listbv.filter(item => item !== idremove);
+        localStorage.setItem('listbv',JSON.stringify(listbv)); 
+        alert('Đã xóa');
+        
+}
+
