@@ -21,6 +21,9 @@ ul li{
     text-decoration: none;
     color: white;
 }
+.a1:hover{
+  color: #c6c2c2;
+}
 
 /* CSS cho main-menu */
 .main-menu{
@@ -48,7 +51,7 @@ ul li{
   
   ul.main-menu li a:hover, .dropdown:hover .dropbtn{
     background-color: white;
-    color: #575a61;
+    color: #e00b0b;
   }
   
   ul.main-menu li.dropdown {
@@ -59,7 +62,6 @@ ul li{
     display: none;
     position: absolute;
     width: 98px;
-    border: 1px solid black;
   }
   
   .dropdown-content a {
@@ -99,16 +101,20 @@ textarea{
 }
 /*Thêm*/
 .dropdown-content>ul>li:hover>a{
-    background-color: red;          /*Thêm hiệu ứng khi hover vào menu đổ xuống*/
+    background-color: rgb(255, 255, 255);          /*Thêm hiệu ứng khi hover vào menu đổ xuống*/
 }
 
 .dropdown-content>ul > li{
-    border: 1px solid black;  /*Thêm đường viền cho menu đổ xuống*/
+    border: 0px aliceblue black;  /*Thêm đường viền cho menu đổ xuống*/
 }
 /*Menu cấp 2
 */
 .level2{
   position: relative;
+  background-color: white;
+}
+.level2 ul li a{
+  background-color: white;
 }
 .level2>ul{
   display: none;
@@ -119,9 +125,37 @@ textarea{
 .level2:hover>ul{
   display: block;
 }
-.level2>ul>li{
-  border: 1px solid black;
-}
 .level2 ul li:hover a{
-  background-color: red;
+  background-color: white;
+}
+.menufooter{
+  display: flex;
+  justify-content: center;
+}
+.footeritem{
+  float: left;
+  padding: 2px 10px;
+  color: #0049CE;
+  font-weight: bold;
+}
+.tg{
+  display: flex;
+  justify-content: center;
+  color: #464444;
+  font-weight: bold;
+}
+#tacgia{
+  color: #0049CE;
+  padding: 0px 5px;
+}
+#footer{
+  margin-bottom: 0px;
+}
+#chitietbv{
+  margin-top: 30px;
+}
+.cttieude{
+  text-align: center;
+  align-items: center;
+  align-content: center;
 }

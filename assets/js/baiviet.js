@@ -1,5 +1,6 @@
 var listbv;
 var listnd;
+var listha;
 function bvmd(){
     var b1 = 'Cách Ẩn cột, dòng và Group cột, dòng trong excel nhanh nhất';
     var b2 = '4 cách làm tròn số trong excel';
@@ -11,16 +12,31 @@ function bvmd(){
     var b8 = 'Cách dùng hàm SUMIFS tính tổng với nhiều điều kiện trong excel';
     var b9 = 'Cách dùng hàm SUMIF tính tổng có điều kiện trong excel';
     var b10 = 'Cách dùng hàm SUM để tính tổng trong Excel';
-    var nd1 = 'Trong bài viết này, mình sẽ hướng dẫn các bạn cách ẩn cột/dòng hoặc cách group cột/dòng trong excel nhanh chóng và thuận tiện<br>1. Cách ẩn cột/dòng và bỏ ẩn cột/dòng trong excel:<br>2. Cách group cột và dòng trong excel';    
-    var nd2 = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam sunt deleniti doloremque eum suscipit vel sint iure placeat tempora nihil doloribus et, mollitia eligendi, ullam maxime veniam reprehenderit ad possimus!';
-    var nd3 = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam sunt deleniti doloremque eum suscipit vel sint iure placeat tempora nihil doloribus et, mollitia eligendi, ullam maxime veniam reprehenderit ad possimus!';
-    var nd4 = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam sunt deleniti doloremque eum suscipit vel sint iure placeat tempora nihil doloribus et, mollitia eligendi, ullam maxime veniam reprehenderit ad possimus!';
-    var nd5 = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam sunt deleniti doloremque eum suscipit vel sint iure placeat tempora nihil doloribus et, mollitia eligendi, ullam maxime veniam reprehenderit ad possimus!';
-    var nd6 = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam sunt deleniti doloremque eum suscipit vel sint iure placeat tempora nihil doloribus et, mollitia eligendi, ullam maxime veniam reprehenderit ad possimus!';
-    var nd7 = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam sunt deleniti doloremque eum suscipit vel sint iure placeat tempora nihil doloribus et, mollitia eligendi, ullam maxime veniam reprehenderit ad possimus!';
-    var nd8 = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam sunt deleniti doloremque eum suscipit vel sint iure placeat tempora nihil doloribus et, mollitia eligendi, ullam maxime veniam reprehenderit ad possimus!';
-    var nd9 = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam sunt deleniti doloremque eum suscipit vel sint iure placeat tempora nihil doloribus et, mollitia eligendi, ullam maxime veniam reprehenderit ad possimus!';
-    var nd10 = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam sunt deleniti doloremque eum suscipit vel sint iure placeat tempora nihil doloribus et, mollitia eligendi, ullam maxime veniam reprehenderit ad possimus!';
+    var nd1 = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam sunt deleniti doloremque eum suscipit vel sint iure placeat tempora nihil doloribus et, mollitia eligendi, ullam maxime veniam reprehenderit ad possimus!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam sunt deleniti doloremque eum suscipit vel sint iure placeat tempora nihil doloribus et, mollitia eligendi, ullam maxime veniam reprehenderit ad possimus!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam sunt deleniti doloremque eum suscipit vel sint iure placeat tempora nihil doloribus et, mollitia eligendi, ullam maxime veniam reprehenderit ad possimus!';    
+    var nd2 = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam sunt deleniti doloremque eum suscipit vel sint iure placeat tempora nihil doloribus et, mollitia eligendi, ullam maxime veniam reprehenderit ad possimus!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam sunt deleniti doloremque eum suscipit vel sint iure placeat tempora nihil doloribus et, mollitia eligendi, ullam maxime veniam reprehenderit ad possimus!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam sunt deleniti doloremque eum suscipit vel sint iure placeat tempora nihil doloribus et, mollitia eligendi, ullam maxime veniam reprehenderit ad possimus!';
+    var nd3 = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam sunt deleniti doloremque eum suscipit vel sint iure placeat tempora nihil doloribus et, mollitia eligendi, ullam maxime veniam reprehenderit ad possimus!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam sunt deleniti doloremque eum suscipit vel sint iure placeat tempora nihil doloribus et, mollitia eligendi, ullam maxime veniam reprehenderit ad possimus!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam sunt deleniti doloremque eum suscipit vel sint iure placeat tempora nihil doloribus et, mollitia eligendi, ullam maxime veniam reprehenderit ad possimus!';
+    var nd4 = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam sunt deleniti doloremque eum suscipit vel sint iure placeat tempora nihil doloribus et, mollitia eligendi, ullam maxime veniam reprehenderit ad possimus!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam sunt deleniti doloremque eum suscipit vel sint iure placeat tempora nihil doloribus et, mollitia eligendi, ullam maxime veniam reprehenderit ad possimus!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam sunt deleniti doloremque eum suscipit vel sint iure placeat tempora nihil doloribus et, mollitia eligendi, ullam maxime veniam reprehenderit ad possimus!';
+    var nd5 = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam sunt deleniti doloremque eum suscipit vel sint iure placeat tempora nihil doloribus et, mollitia eligendi, ullam maxime veniam reprehenderit ad possimus!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam sunt deleniti doloremque eum suscipit vel sint iure placeat tempora nihil doloribus et, mollitia eligendi, ullam maxime veniam reprehenderit ad possimus!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam sunt deleniti doloremque eum suscipit vel sint iure placeat tempora nihil doloribus et, mollitia eligendi, ullam maxime veniam reprehenderit ad possimus!';
+    var nd6 = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam sunt deleniti doloremque eum suscipit vel sint iure placeat tempora nihil doloribus et, mollitia eligendi, ullam maxime veniam reprehenderit ad possimus!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam sunt deleniti doloremque eum suscipit vel sint iure placeat tempora nihil doloribus et, mollitia eligendi, ullam maxime veniam reprehenderit ad possimus!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam sunt deleniti doloremque eum suscipit vel sint iure placeat tempora nihil doloribus et, mollitia eligendi, ullam maxime veniam reprehenderit ad possimus!';
+    var nd7 = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam sunt deleniti doloremque eum suscipit vel sint iure placeat tempora nihil doloribus et, mollitia eligendi, ullam maxime veniam reprehenderit ad possimus!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam sunt deleniti doloremque eum suscipit vel sint iure placeat tempora nihil doloribus et, mollitia eligendi, ullam maxime veniam reprehenderit ad possimus!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam sunt deleniti doloremque eum suscipit vel sint iure placeat tempora nihil doloribus et, mollitia eligendi, ullam maxime veniam reprehenderit ad possimus!';
+    var nd8 = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam sunt deleniti doloremque eum suscipit vel sint iure placeat tempora nihil doloribus et, mollitia eligendi, ullam maxime veniam reprehenderit ad possimus!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam sunt deleniti doloremque eum suscipit vel sint iure placeat tempora nihil doloribus et, mollitia eligendi, ullam maxime veniam reprehenderit ad possimus!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam sunt deleniti doloremque eum suscipit vel sint iure placeat tempora nihil doloribus et, mollitia eligendi, ullam maxime veniam reprehenderit ad possimus!';
+    var nd9 = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam sunt deleniti doloremque eum suscipit vel sint iure placeat tempora nihil doloribus et, mollitia eligendi, ullam maxime veniam reprehenderit ad possimus!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam sunt deleniti doloremque eum suscipit vel sint iure placeat tempora nihil doloribus et, mollitia eligendi, ullam maxime veniam reprehenderit ad possimus!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam sunt deleniti doloremque eum suscipit vel sint iure placeat tempora nihil doloribus et, mollitia eligendi, ullam maxime veniam reprehenderit ad possimus!';
+    var nd10 = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam sunt deleniti doloremque eum suscipit vel sint iure placeat tempora nihil doloribus et, mollitia eligendi, ullam maxime veniam reprehenderit ad possimus!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam sunt deleniti doloremque eum suscipit vel sint iure placeat tempora nihil doloribus et, mollitia eligendi, ullam maxime veniam reprehenderit ad possimus!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam sunt deleniti doloremque eum suscipit vel sint iure placeat tempora nihil doloribus et, mollitia eligendi, ullam maxime veniam reprehenderit ad possimus!';
+    var ha1 = '/Image/ava-an-group-700x465.jpg'; 
+    var ha2 = '/Image/ava-4-cach-lam-tron-700x465.jpg'; 
+    var ha3 = '/Image/ava-3-cach-tinh-tong-700x465.jpg'; 
+    var ha4 = '/Image/ava-ham-minmax-700x465.jpg'; 
+    var ha5 = '/Image/ham-do-tim-700x465.jpg'; 
+    var ha6 = '/Image/ava-ham-chuoi-700x465.jpg'; 
+    var ha7 = '/Image/ava-ham-can-ban-700x465.jpg'; 
+    var ha8 = '/Image/ava-ham-sumifs-700x465.jpg'; 
+    var ha9 = '/Image/ava-ham-sumif-700x465.jpg'; 
+    var ha10 = '/Image/ava-ham-sum-700x465.jpg';    
+    if(localStorage.getItem('listha')){
+        listha = JSON.parse(localStorage.getItem('listha'));
+    }else{
+        listha = [];
+    }
 
     if(localStorage.getItem('listbv')){
         listbv = JSON.parse(localStorage.getItem('listbv'));
@@ -32,8 +48,14 @@ function bvmd(){
     }else{
         listcongkhai = [];
     }
+    var ktha = 0;
     var ktall = 0;
     var ktck = 0;
+    for(var i = 0; i < listha.length; i++){
+        if(listha[i]===b1 || listha[i]===b2 || listha[i]===b3 || listha[i]===b4 || listha[i]===b5 || listha[i]===b6 || listha[i]===b7 || listha[i]===b8 || listha[i]===b9 || listha[i]===b10){
+            ktha++;
+        }
+     }
     for(var i = 0; i < listbv.length; i++){
        if(listbv[i]===b1 || listbv[i]===b2 || listbv[i]===b3 || listbv[i]===b4 || listbv[i]===b5 || listbv[i]===b6 || listbv[i]===b7 || listbv[i]===b8 || listbv[i]===b9 || listbv[i]===b10){
            ktall++;
@@ -65,6 +87,22 @@ function bvmd(){
     }else{
         listcongkhai.push(b1,b2,b3,b4,b5,b6,b7,b8,b9,b10);
         localStorage.setItem('listcongkhai',JSON.stringify(listcongkhai));  
+
+    }
+    if(ktha>0){
+        false;
+    }else{
+        listha.push(ha1,ha2,ha3, ha4, ha5,ha6,ha7,ha8,ha9,ha10);
+        localStorage.setItem(b1+'a',ha1);   
+        localStorage.setItem(b2+'a',ha2); 
+        localStorage.setItem(b3+'a',ha3); 
+        localStorage.setItem(b4+'a',ha4); 
+        localStorage.setItem(b5+'a',ha5); 
+        localStorage.setItem(b6+'a',ha6); 
+        localStorage.setItem(b7+'a',ha7); 
+        localStorage.setItem(b8+'a',ha8); 
+        localStorage.setItem(b9+'a',ha9); 
+        localStorage.setItem(b10+'a',ha10);  
 
     }
     // alert(listbv.length)
@@ -107,7 +145,6 @@ function listbvcongkhai(id){
     listcongkhai.push(id);
             localStorage.setItem('listcongkhai',JSON.stringify(listcongkhai));  
 }
-var listha;
 function listhinhanhbv(id,a){
     
     if(localStorage.getItem('listha')){
@@ -168,7 +205,7 @@ function hienthibaivietck(){
     var tb = "";
     for(var i = 0; i < listcongkhai.length;i++){
         var anh = listcongkhai[i] + 'a';
-        var row = '<tr onclick="xemchitietbv('+i+')"><td class="baiviet" width="100px" height="100px"><img src="'+hienthi(anh)+'" style="width: 50px" alt="Preview" id="imgPreview" ></td><td class="baiviet">'+listcongkhai[i]+'<br>'+localStorage.getItem(listcongkhai[i])+'</td></tr>';
+        var row = '<tr onclick="xemchitietbv('+i+')"><td class="baiviet" width="100px" height="100px"><img src="'+hienthi(anh)+'" style="width: 400px" alt="Preview" id="imgPreview" ></td><td class="baiviet"><h2>'+listcongkhai[i]+'</h2><br><p style="font-size: 20px;">'+localStorage.getItem(listcongkhai[i])+'</p></td></tr>';
         tb += row;
      }
      return tb;
@@ -187,13 +224,15 @@ function chitietbaiviet(){
     var td = localStorage.getItem('phienbaiviet');
     var nd = localStorage.getItem(td);
     var anh = td + 'a';
-    var body = td +'<br>' + '<td><img src="'+hienthi(anh)+'" alt="Preview" id="imgPreview" ></td>'+'<br>' + nd;
+    var body = '<h1 style="font-size: 40px" class="cttieude">'+td+'</h1>'+'<br>' + '<div class="cttieude"><img src="'+hienthi(anh)+'" alt="Preview" id="imgPreview class="cttieude" ></div>'+'<br>' + '<div class="cttieude" style="font-size: 30px">'+nd+'</div>';
     return body;
 }
 function hienanh(event) {
     var output = document.getElementById('output');
     output.src = URL.createObjectURL(event.target.files[0]);
-    output.style.width ='50px'
+    a = document.getElementById('myFileInput');
+    // output.src='/image/'+a.files[0].name;
+    output.style.width ='100px'
     output.style.height ='50px'
   };
   function hienthi(i){
@@ -202,4 +241,15 @@ function hienanh(event) {
         var a = recent;
     }
     return a;
+}
+// function luuanh(){
+//     var tieude = document.getElementById('tieude').value;
+//     a = document.getElementById('myFileInput')
+//     console.log('/image/'+a.files[0].name);
+//     localStorage.setItem(tieude+'a','/image/'+a.files[0].name)
+    
+// }
+function gop(){
+    hienanh(event);
+    luuanh();
 }
