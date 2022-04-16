@@ -124,11 +124,13 @@ function thembaiviet(){
     alert('Đăng bài viết thành công!');
     if(checkdb()!== ""){
         addbv(tieude,noidung);
+        ghils(localStorage.getItem('phiendangnhap'),Date(),'Chỉnh sửa bài viết '+tieude)
     }else{
         addlistbv(tieude);
         addbv(tieude,noidung);
         listbvcongkhai(tieude);
         listhinhanhbv(hinhanh,tieude);
+        ghils(localStorage.getItem('phiendangnhap'),Date(),'Thêm bài viết '+tieude)
     }    
     }else{
         alert('Đăng bài thất bại!')
@@ -215,7 +217,7 @@ function xemchitietbv(i){
     listcongkhai = JSON.parse(localStorage.getItem('listcongkhai'));
     var td = listcongkhai[i];
     var nd = localStorage.getItem(listcongkhai[i]);
-    
+    ghils(localStorage.getItem('phiendangnhap'),Date(),'Xem bài viết '+listcongkhai[i])
     localStorage.setItem('phienbaiviet',td);
     location.href='../page/chitietbaiviet.html'
 }
@@ -277,11 +279,6 @@ function xoa(i){
 
     xoalistbv(i);
     window.location="../../page/trangdangbaiviet.html";
-    if(localStorage.getItem('listcongkhai')){
-        listcongkhai = JSON.parse(localStorage.getItem('listcongkhai'));
-    }else{
-        listcongkhai = [];
-    }
 }
 function xoalistbv(i){
     if(localStorage.getItem('listbv')){
@@ -292,6 +289,7 @@ function xoalistbv(i){
         var idremove = listbv[i];
         listbv = listbv.filter(item => item !== idremove);
         localStorage.setItem('listbv',JSON.stringify(listbv)); 
+        ghils(localStorage.getItem('phiendangnhap'),Date(),'Xóa bài viết '+listbv[i])
         alert('Đã xóa');
         
 }

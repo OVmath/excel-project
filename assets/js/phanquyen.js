@@ -147,12 +147,13 @@ function phanadmin(i){
             xoauser(i);
             listadmin.push(localStorage.getItem(listid[i]));
             localStorage.setItem('listadmin',JSON.stringify(listadmin)); 
-            
+            ghils(localStorage.getItem('phiendangnhap'),Date(),'Thêm '+localStorage.getItem(listid[i])+' làm quản trị viên')
             alert('Đã thêm '+localStorage.getItem(listid[i])+' làm quản trị viên')
         }else{
             var idremove = listadmin[stt];
             listadmin = listadmin.filter(item => item !== idremove);
             localStorage.setItem('listadmin',JSON.stringify(listadmin)); 
+            ghils(localStorage.getItem('phiendangnhap'),Date(),'Xóa '+idremove+' khỏi danh sách admin')
             alert('Đã loại bỏ '+ idremove + ' ra khỏi danh sách Admin');
         }
         window.location="../../page/setting.html";
@@ -184,12 +185,14 @@ function phanbtv(i){
             xoauser(i);
             listbtv.push(localStorage.getItem(listid[i]));
             localStorage.setItem('listbtv',JSON.stringify(listbtv)); 
+            ghils(localStorage.getItem('phiendangnhap'),Date(),'Thêm '+localStorage.getItem(listid[i])+' làm biên tập viên')
             alert('Đã thêm '+localStorage.getItem(listid[i])+' làm Biên tập viên');
             
         }else{
             var idremove = listbtv[stt];
             listbtv = listbtv.filter(item => item !== idremove);
             localStorage.setItem('listbtv',JSON.stringify(listbtv)); 
+            ghils(localStorage.getItem('phiendangnhap'),Date(),'Xóa '+idremove+' khỏi danh sách biên tập viên')
             alert('Đã loại bỏ '+ idremove + ' ra khỏi danh sách Biên tập viên');
         }
         window.location="../../page/setting.html";
@@ -221,12 +224,13 @@ function phanuser(i){
             xoabtv(i);
             listuser.push(localStorage.getItem(listid[i]));
             localStorage.setItem('listuser',JSON.stringify(listuser)); 
-            
+            ghils(localStorage.getItem('phiendangnhap'),Date(),'Thêm '+localStorage.getItem(listid[i])+' làm user')
             alert('Đã thêm '+localStorage.getItem(listid[i])+' làm User')
         }else{
             var idremove = listuser[stt];
             listuser = listuser.filter(item => item !== idremove);
             localStorage.setItem('listuser',JSON.stringify(listuser)); 
+            ghils(localStorage.getItem('phiendangnhap'),Date(),'Xóa '+idremove+' khỏi danh sách user')
             alert('Đã loại bỏ '+ idremove + ' ra khỏi danh sách User');
         }
         window.location="../../page/setting.html";

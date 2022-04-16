@@ -20,6 +20,7 @@ function dangki(){
             adduser(id,mk2); 
             addlist(id);
             addlistuser(id);
+            ghils(id,Date(),'Đăng kí tài khoản')
             
         }       
     }
@@ -44,6 +45,7 @@ function doimatkhau(){
                 window.location="../page/login.html";
                 alert('Đổi mật khẩu thành công!');
                 adduser(id,mk2); 
+                ghils(id,Date(),'Đổi mật khẩu')
         }
                 
                  
