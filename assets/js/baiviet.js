@@ -293,4 +293,33 @@ function xoalistbv(i){
         alert('Đã xóa');
         
 }
+var phanhoi = {
+    user : "",
+    thoigian : "",
+    ykien : ""
+};
+function ghiph(user,thoigian,baiviet,ykien){
+    if(localStorage.getItem('phanhoi')){
+        phoi = JSON.parse(localStorage.getItem('phanhoi'));
+    }else{
+        phoi = [];
+    }
+    phanhoi.user = user; 
+    phanhoi.thoigian = thoigian; 
+    phanhoi.baiviet = baiviet;
+    phanhoi.ykien = ykien;
+    if(user === "" || thoigian === "" || baiviet ==="" || ykien ===""){
+        alert('Nhập chưa đủ thông tin!\nVui lòng điền thêm giá trị!')
+    }else{
+        phoi.push(phanhoi);
+    alert('Gửi phản hồi thành công!!')
+    localStorage.setItem('phanhoi',JSON.stringify(phoi))
+    }
+    
+}
+function guiykien(){
+    var noidung = document.getElementById('phanhoi').value;
+    ghiph(localStorage.getItem('phiendangnhap'),Date(),localStorage.getItem('phienbaiviet'),noidung);
+    
+}
 

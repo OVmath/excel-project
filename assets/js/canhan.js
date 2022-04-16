@@ -50,6 +50,19 @@ function xemls(user){
     }
     return tb;
 }
+function xemph(){
+    if(localStorage.getItem('phanhoi')){
+        phoi = JSON.parse(localStorage.getItem('phanhoi'));
+    }else{
+        phoi = [];
+    }
+    var tb = "<tr><td colspan="+4+">Phản hồi của người dùng ("+phoi.length+" phản hồi)</td></tr> <tr><td>Dấu thời gian</td><td>Ý kiến</td><td>Phản hồi bài viết</td><td>Người phản hồi</td></tr>";
+    for(var i = 0; i < phoi.length;i++){
+       row = "<tr><td>"+phoi[i].thoigian+"</td><td>"+phoi[i].ykien+"</td><td>"+phoi[i].baiviet+"</td><td>"+phoi[i].user+"</td></tr>"
+       tb+=row;
+    }
+    return tb;
+}
 function t(){
     var user = localStorage.getItem("phiendangnhap");
     var ls = 'ls'+user;

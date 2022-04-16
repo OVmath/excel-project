@@ -84,12 +84,17 @@ function thoat(){
 }
 function checkdk(){
     var id = document.getElementById('tendangki').value;  
+    var mk1 = document.getElementById('mk1').value;   
+    var mk2 = document.getElementById('mk2').value; 
     if(localStorage.getItem('listid')){
         listid = JSON.parse(localStorage.getItem('listid'));
     }else{
         listid = [];
     }
     var checkid = "";
+    if(id=="" || mk1 == "" || mk2 == ""){
+        checkid = "Yêu cầu nhập đủ thông tin!!"
+    }
     for(var i = 0; i < listid.length;i++){
         if(id === listid[i]){
            checkid = "Tên đăng nhập đã tồn tại!\nVui lòng nhập tên khác!";

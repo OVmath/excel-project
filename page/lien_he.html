@@ -5,10 +5,11 @@
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <link rel="stylesheet" href="/assets/css/main.css">
+   <link rel="stylesheet" href="/assets/css/siginin.css">
    <link rel="shortcut icon" href="/Image/excel.png" type="image/x-icon">
    <script src="/assets/js/main.js"></script>
-   <script src="/assets/js/phanquyen.js"></script>
    <script src="/assets/js/canhan.js"></script>
+   <script src="/assets/js/baiviet.js"></script>
    <title>Trang chủ</title>
 </head>
 <body>
@@ -28,40 +29,46 @@
       </ul>	  
       <ul class="nav-list">
          <li class="nav-item">
-            <a href="/page/signin.html" class="a1" id="user">Đăng kí</a>
+            <a href="/page/trang_ca_nhan.html" class="a1" id="ten-user">
+               <script>
+                  document.getElementById("ten-user").innerHTML = localStorage.getItem('phiendangnhap');
+               </script>
+            </a>
          </li>
          <li class="nav-item">
-            <a href="/page/login.html" class="a1" id="out" onclick="thoat()">Đăng nhập</a>
+            <a href="/page/login.html" class="a1" onclick="thoat()">Đăng xuất</a>
          </li>
-      </ul>	
-      <script>
-         if(localStorage.getItem('phiendangnhap').value !== ""){
-            document.getElementById('user').innerHTML=localStorage.getItem('phiendangnhap');
-            document.getElementById('user').href="/page/trang_ca_nhan.html";
-            document.getElementById('out').innerHTML='Đăng xuất';
-         }
-      </script>	
+      </ul>		
    </div>
-   <table cellspacing="10px">
-      <tr>
-         <td style="width: 150px;">Nguyễn Trọng Nghĩa</td>
-         <td style="width: 100px;">SĐT:8888888888</td>
-      </tr>
-      <tr>
-         <td>Lê Minh Tuấn</td>
-         <td>SĐT:77777777777</td>
-      </tr>
-   </table>
-   <div>
-      <form>
-         <fieldset> 
-            <legend style="text-align: center;font-style: bold;">Ý kiến phản hồi</legend>
-            <br>
-            <input type="email" name="" placeholder="Nhập email">
-            <textarea placeholder="Nhập phản hồi"></textarea>
-            <button type="submit">Nộp</button>
-         </fieldset>
-      </form>
-   </div>
+   <form action="">
+   <fieldset>
+		<legend><b>FORM:</b></legend>
+		<table>
+			<tr>
+				<td colspan="4">
+					<marquee behavior="alternate" direction="">
+                  <b>LIÊN HỆ</b>
+               </marquee>
+				</td>
+			</tr>
+			<tr>
+				<td>Name:</td>
+				<td> <input type="text" placeholder="Nhập tên của bạn..." id="ten" style="width: 400px"  required="required"></td>
+			</tr>
+         <tr>
+            <td>
+               Message:
+            </td>
+            <td>
+               <textarea placeholder="Nhập phản hồi ở đây...." id="message" cols="30" rows="10" required="required"></textarea>
+            </td>
+         </tr>
+		</table>
+      <div>
+         <button type="reset">Reset</button>
+         <button type="submit" onclick="ghiph(document.getElementById('ten').value,Date(),'Phản hồi đầu trang',document.getElementById('message').value)">Send</button>
+      </div>
+	</fieldset>
+   </form> 
 </body>
 </html>
