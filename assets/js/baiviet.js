@@ -1,6 +1,13 @@
 var listbv;
 var listnd;
 var listha;
+var listcs;
+var lancs = {
+    noidung: "",
+    user: "",
+    thoigian: "",
+}
+
 function bvmd(){
     var b1 = 'Cách Ẩn cột, dòng và Group cột, dòng trong excel nhanh nhất';
     var b2 = '4 cách làm tròn số trong excel';
@@ -117,24 +124,35 @@ function thembaiviet(){
         listbv = [];
     }   
     var kq = true;
+    
     if(checkdb() !== ""){
          kq =confirm(checkdb());
     }
     if(kq == true && tieude !== "" && noidung !== ""){
-    alert('Đăng bài viết thành công!');
+    
     if(checkdb()!== ""){
+        window.location="/page/trangdangbaiviet.html"
         addbv(tieude,noidung);
-        ghils(localStorage.getItem('phiendangnhap'),Date(),'Chỉnh sửa bài viết '+tieude)
+        ghilscs(localStorage.getItem('phiendangnhap'),Date(),'Chỉnh sửa bài viết '+tieude,tieude);
+    alert("Chỉnh sửa bài viết thành công")        
     }else{
+        window.location="/page/trangdangbaiviet.html"
         addlistbv(tieude);
         addbv(tieude,noidung);
         listbvcongkhai(tieude);
         listhinhanhbv(hinhanh,tieude);
-        ghils(localStorage.getItem('phiendangnhap'),Date(),'Thêm bài viết '+tieude)
+        ghils(localStorage.getItem('phiendangnhap'),Date(),'Thêm bài viết '+tieude) 
+        alert("Đăng bài viết thành công")   
+        
     }    
     }else{
         alert('Đăng bài thất bại!')
     }
+    return tt;
+    
+}
+function tt(){
+    alert(thembaiviet())
 }
 var listcongkhai;
 function listbvcongkhai(id){
@@ -258,6 +276,7 @@ function sapxepaction(i){
         lc = o1 + o2;
     return lc;    
 }
+
 function chinhsua(i){
     if(localStorage.getItem('listbv')){
         listbv = JSON.parse(localStorage.getItem('listbv'));
@@ -268,8 +287,33 @@ function chinhsua(i){
         document.getElementById('noidung').value=localStorage.getItem(listbv[i]);
         document.getElementById('formbv').innerText='Chỉnh sửa bài viết';
         location.href="#formbv"
-        
+        ghics(localStorage.getItem('phiendangnhap'),Date(),localStorage.getItem(listbv[i]))
 } 
+
+function ghics(user,thoigian,noidung){
+    if(localStorage.getItem('lcs')){
+        listcs = JSON.parse(localStorage.getItem('lcs'));
+    }else{
+        listcs = [];
+    }
+    lancs.user = user; 
+    lancs.noidung = noidung;
+    lancs.thoigian = thoigian;
+    listcs.push(lancs);
+    localStorage.setItem('lcs',JSON.stringify(listcs));
+    }
+    
+function khoiphuc(tieude){
+    if(localStorage.getItem('lcs')){
+        listcs = JSON.parse(localStorage.getItem('lcs'));
+    }else{
+        listcs = [];
+    }
+    alert('Khôi phục bài viết thành công!')
+    var vt = listcs.length -1;
+    // alert(listcs[vt].noidung)
+    addbv(tieude,listcs[vt].noidung)
+}
 function xoa(i){
     if(localStorage.getItem('listha')){
         listha = JSON.parse(localStorage.getItem('listha'));
@@ -313,6 +357,7 @@ function ghiph(user,thoigian,baiviet,ykien){
     }else{
         phoi.push(phanhoi);
     alert('Gửi phản hồi thành công!!')
+    ghils(user,Date(),'Phản hồi bài viết'+phanhoi.baiviet);
     localStorage.setItem('phanhoi',JSON.stringify(phoi))
     }
     
@@ -320,6 +365,7 @@ function ghiph(user,thoigian,baiviet,ykien){
 function guiykien(){
     var noidung = document.getElementById('phanhoi').value;
     ghiph(localStorage.getItem('phiendangnhap'),Date(),localStorage.getItem('phienbaiviet'),noidung);
-    
 }
+
+
 

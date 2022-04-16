@@ -20,7 +20,7 @@ function dangki(){
             adduser(id,mk2); 
             addlist(id);
             addlistuser(id);
-            ghils(id,Date(),'Đăng kí tài khoản')
+            ghils(id,Date(),'Đăng kí tài khoản');
             
         }       
     }
@@ -75,6 +75,7 @@ function dangnhap(){
         window.location="../page/trang_ca_nhan.html";
         alert('Đăng nhập thành công!');
         localStorage.setItem('phiendangnhap',id)
+        ghils(id,Date(),'Đăng nhập tài khoản');
     }else{
         alert('Đăng nhập không thành công!\nVui lòng kiểm tra lại thông tin đăng nhập!')
     }

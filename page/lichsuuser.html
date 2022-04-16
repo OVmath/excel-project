@@ -10,6 +10,7 @@
    <script src="/assets/js/main.js"></script>
    <script src="/assets/js/phanquyen.js"></script>
    <script src="/assets/js/canhan.js"></script>
+   <script src="/assets/js/baiviet.js"></script>
    <title>Trang chủ</title>
 </head>
 <body>
@@ -62,9 +63,15 @@
            </div>
    </div>
    <table id="dsuser" border="1px">
+   <table id="cacuser" border="1px" style="width: 100%;"></table>
       <script>
             var html = xemls();
-          document.getElementById("dsuser").innerHTML=html;               
+          document.getElementById("dsuser").innerHTML=html;   
+          if(localStorage.getItem("phiendangnhap")=='Admin' || ktraadmin()=='1'){
+            var html = xemlscacuser();
+                     document.getElementById("cacuser").innerHTML=html;
+                     
+                  }            
       </script>
    </table>
 </body>

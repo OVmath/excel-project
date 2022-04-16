@@ -16,10 +16,10 @@ function chuyentrangdoimatkhau(){
 var lichsu = {
     user : "",
     thoigian : "",
-    hanhdong : ""
+    hanhdong : "",
+    doituong : ""
 };
 function ghils(user,thoigian,hanhdong){
-    var user = localStorage.getItem("phiendangnhap");
     var ls = 'ls'+user;
     if(localStorage.getItem(ls)){
         log = JSON.parse(localStorage.getItem(ls));
@@ -30,11 +30,35 @@ function ghils(user,thoigian,hanhdong){
     lichsu.thoigian = thoigian; 
     lichsu.hanhdong = hanhdong;
     log.push(lichsu);
-    localStorage.setItem('ls' + user,JSON.stringify(log))
+    localStorage.setItem('ls' + user,JSON.stringify(log));
+    tonghopls(lichsu);
+}
+function ghilscs(user,thoigian,hanhdong,doituong){
+    var ls = 'ls'+user;
+    if(localStorage.getItem(ls)){
+        log = JSON.parse(localStorage.getItem(ls));
+    }else{
+        log = [];
+    }
+    lichsu.user = user; 
+    lichsu.thoigian = thoigian; 
+    lichsu.hanhdong = hanhdong;
+    lichsu.doituong = doituong;
+    log.push(lichsu);
+    localStorage.setItem('ls' + user,JSON.stringify(log));
+    tonghopls(lichsu);
 }
 // ghils(1,'fsdsdfs','sdfsdf')
 // ghils(1,'fsdsdfs','sdfsdttttf')
-
+function tonghopls(i){
+    if(localStorage.getItem('ls')){
+        tonghop = JSON.parse(localStorage.getItem('ls'));
+    }else{
+        tonghop = [];
+    }
+    tonghop.push(i)
+    localStorage.setItem('ls',JSON.stringify(tonghop))
+}
 function xemls(user){
     var user = localStorage.getItem("phiendangnhap");
     var ls = 'ls'+user;
@@ -67,4 +91,23 @@ function t(){
     var user = localStorage.getItem("phiendangnhap");
     var ls = 'ls'+user;
     alert(ls)
+}
+function xemlscacuser(){
+    if(localStorage.getItem('ls')){
+        tonghop = JSON.parse(localStorage.getItem('ls'));
+    }else{
+        tonghop = [];
+    }
+    var tb = "<tr><td colspan="+4+">Hoạt động của người dùng ("+tonghop.length+" hoạt động)</td></tr> <tr><td>Dấu thời gian</td><td>Hành động</td><td>Người dùng</td></tr>";
+    for(var i = 0; i < tonghop.length;i++){
+       row = "<tr><td>"+tonghop[i].thoigian+"</td><td>"+tonghop[i].hanhdong+"</td><td>"+tonghop[i].user+"</td><td>"+nutkp(tonghop[i].doituong)+"</td></tr>"
+       tb+=row;
+    }
+    return tb;
+}
+function nutkp(i){
+    var lc = '';
+    var o1 = '<button type="button" onclick="khoiphuc(\''+i+'\')">Khôi phục</button>';
+        lc = o1;
+    return lc;    
 }
