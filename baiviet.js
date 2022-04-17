@@ -865,8 +865,9 @@ function hienthibaivietck(){
  
 }
 function xemchitietbv(i){
-    listcongkhai = JSON.parse(localStorage.getItem('listcongkhai'));
+    listcongkhai = JSON.parse(localStorage.getItem('listbv'));
     var td = listcongkhai[i];
+    var nd = localStorage.getItem(listcongkhai[i])
     ghils(localStorage.getItem('phiendangnhap'),Date(),'Xem bài viết '+listcongkhai[i])
     localStorage.setItem('phienbaiviet',td);
     location.href='chitietbaiviet.html'

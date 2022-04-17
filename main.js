@@ -44,6 +44,7 @@ function doimatkhau(){
                 setTimeout(function(){document.location.href = "login.html"},500);
                 alert('Đổi mật khẩu thành công!');
                 adduser(id,mk2); 
+                addlistuser(id);
                 ghils(id,Date(),'Đổi mật khẩu')
         }
                 
