@@ -651,15 +651,15 @@ function bvmd(){
     }else{
         listcongkhai = [];
     }
-    if(localStorage.getItem('bcb')){
-        cb = JSON.parse(localStorage.getItem('bcb'));
+    if(localStorage.getItem('bvcb')){
+        bvcb = JSON.parse(localStorage.getItem('bvcb'));
     }else{
-        cb = [];
+        bvcb = [];
     }
-    if(localStorage.getItem('bnc')){
-        nc = JSON.parse(localStorage.getItem('bnc'));
+    if(localStorage.getItem('bvnc')){
+        bvnc = JSON.parse(localStorage.getItem('bvnc'));
     }else{
-        nc = [];
+        bvnc = [];
     }
     var ktha = 0;
     var ktall = 0;
@@ -681,13 +681,13 @@ function bvmd(){
             ktck++;
         }
      }
-     for(var i = 0; i < cb.length; i++){
-        if(bcb[i]===b11 || bcb[i]===b12 || bcb[i]===b13 || bcb[i]===b14 || bcb[i]===b15 ){
+     for(var i = 0; i < bvcb.length; i++){
+        if(bvcb[i]===b11 || bvcb[i]===b12 || bvcb[i]===b13 || bvcb[i]===b14 || bvcb[i]===b15 ){
             ktcb++;
         }
      }
-     for(var i = 0; i < nc.length; i++){
-        if(bnc[i]===b7 || bnc[i]===b8 || bnc[i]===b9 || bnc[i]===b10 || bnc[i]===b16 || bnc[i]===b17){
+     for(var i = 0; i < bvnc.length; i++){
+        if(bvnc[i]===b7 || bvnc[i]===b8 || bvnc[i]===b9 || bvnc[i]===b10 || bvnc[i]===b16 || bvnc[i]===b17){
             ktnc++;
         }
      }
@@ -724,15 +724,15 @@ function bvmd(){
     if(ktcb>0){
         false;
     }else{
-        cb.push(b11,b12,b13,b14,b15);
-        localStorage.setItem('bcb',JSON.stringify(cb));  
+        bvcb.push(b11,b12,b13,b14,b15);
+        localStorage.setItem('bvcb',JSON.stringify(bvcb));  
 
     }
     if(ktnc>0){
         false;
     }else{
-        nc.push(b8,b9,b10,b11,b7,b16);
-        localStorage.setItem('bnc',JSON.stringify(nc));  
+        bvnc.push(b8,b9,b10,b11,b7,b16);
+        localStorage.setItem('bvnc',JSON.stringify(bvnc));  
 
     }
     if(ktha>0){
@@ -758,7 +758,7 @@ function bvmd(){
         localStorage.setItem(b17+'a',ha17);
     }
 }  
-var _lsTotal=0,_xLen,_x;for(_x in localStorage){ if(!localStorage.hasOwnProperty(_x)){continue;} _xLen= ((localStorage[_x].length + _x.length)* 2);_lsTotal+=_xLen; console.log(_x.substr(0,50)+" = "+ (_xLen/1024).toFixed(2)+" KB")};console.log("Total = " + (_lsTotal / 1024).toFixed(2) + " KB");
+
 bvmd()
 function thembaiviet(){
     var tieude = document.getElementById('tieude').value;  
@@ -872,8 +872,8 @@ function xemchitietbv(i){
     location.href='chitietbaiviet.html'
 }
 function hienthibaivietcb(){
-    if(localStorage.getItem('bcb')){
-        listcongkhai = JSON.parse(localStorage.getItem('bcb'));
+    if(localStorage.getItem('bvcb')){
+        listcongkhai = JSON.parse(localStorage.getItem('bvcb'));
     }else{
         listcongkhai = [];
     }
@@ -887,8 +887,8 @@ function hienthibaivietcb(){
  
 }
 function hienthibaivietnc(){
-    if(localStorage.getItem('bnc')){
-        listcongkhai = JSON.parse(localStorage.getItem('bnc'));
+    if(localStorage.getItem('bvnc')){
+        listcongkhai = JSON.parse(localStorage.getItem('bvnc'));
     }else{
         listcongkhai = [];
     }
