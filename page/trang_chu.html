@@ -4,36 +4,36 @@
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link rel="stylesheet" href="/assets/css/main.css">
-   <link rel="stylesheet" href="/assets/css/setting.css">
-   <script src="/assets/js/main.js"></script>
-   <script src="/assets/js/phanquyen.js"></script>
-   <script src="/assets/js/baiviet.js"></script>
-   <script src="/assets/js/canhan.js"></script>
-   <link rel="shortcut icon" href="/Image/excel.png" type="image/x-icon">
+   <link rel="stylesheet" href="assets/css/main.css">
+   <link rel="stylesheet" href="assets/css/setting.css">
+   <script src="assets/js/main.js"></script>
+   <script src="assets/js/phanquyen.js"></script>
+   <script src="assets/js/baiviet.js"></script>
+   <script src="assets/js/canhan.js"></script>
+   <link rel="shortcut icon" href="Image/excel.png" type="image/x-icon">
    <title>Trang chủ</title>
 </head>
-<body>
+<body>   
    <div class="nav">
       <ul class="nav-list">
          <ul class="nav-list">
             <li class="nav-item">
-               <a href="/page/trang_chu.html" class="a1">Trang chủ</a>
+               <a href="page/trang_chu.html" class="a1">Trang chủ</a>
             </li>
             <li class="nav-item">
-               <a href="/page/gioi_thieu.html" class="a1">Giới thiệu</a>
+               <a href="page/gioi_thieu.html" class="a1">Giới thiệu</a>
             </li>
             <li class="nav-item">
-               <a href="/page/lien_he.html" class="a1">Liên hệ</a>
+               <a href="page/lien_he.html" class="a1">Liên hệ</a>
             </li>
          </ul>
       </ul>	  
       <ul class="nav-list">
          <li class="nav-item">
-            <a href="/page/signin.html" class="a1" id="user">Đăng kí</a>
+            <a href="page/signin.html" class="a1" id="user">Đăng kí</a>
          </li>
          <li class="nav-item">
-            <a href="/page/login.html" class="a1" id="out" onclick="thoat()">Đăng nhập</a>
+            <a href="page/login.html" class="a1" id="out" onclick="thoat()">Đăng nhập</a>
          </li>
       </ul>	
       <script>
@@ -48,33 +48,33 @@
    <div class="main-menu">
 	   <div></div>
 			<ul class="main-menu">
-				<li><a href="/page/trang_chu.html">Trang chủ</a></li>
+				<li><a href="page/trang_chu.html">Trang chủ</a></li>
 				<li class="dropdown">
-					<a href="/page/bai_viet.html" class="dropbtn">Danh mục</a>
+					<a href="page/bai_viet.html" class="dropbtn">Danh mục</a>
 					<div class="dropdown-content">    <!-- Menu đa cấp -->
                   <ul>
-                   <li class="level2"><a href="../page/coban.html">Cơ bản</a>
+                   <li class="level2"><a href="page/bai_viet.html">Cơ bản</a>
                         <ul>
-                           <li><a href="">Cơ bản 1</a></li>
+                        <li><a href="">Cơ bản 1</a></li>
                         <li><a href="">Cơ bản 2</a></li>
                         <li><a href="">Cơ bản 3</a></li>
                         </ul>
                    </li>
-                   <li class="level2"><a href="/page/nangcao.html">Nâng cao</a>
+                   <li class="level2"><a href="page/bai_viet.html">Nâng cao</a>
                         <ul>
-                           <li><a href="">Nâng cao 1</a></li>
-                           <li><a href="">Nâng cao 2</a></li>
-                           <li><a href="">Nâng cao 3</a></li>
+                        <li><a href="">Nâng cao 1</a></li>
+                        <li><a href="">Nâng cao 2</a></li>
+                        <li><a href="">Nâng cao 3</a></li>
                         </ul>
                    </li>
                   </ul>
               </div>           
 				  </li>	
-				  <li><a href="/page/bai_viet.html">Bài viết</a></li>	
+				  <li><a href="page/bai_viet.html">Bài viết</a></li>	
               <li id="canhan">
                <script>
                   if(localStorage.getItem("phiendangnhap")=='Admin' || ktraadmin()=='1' || ktrabtv() == '1' || ktrauser() == '1'){
-                     document.getElementById("canhan").innerHTML='<a href="/page/trang_ca_nhan.html">Trang cá nhân</a>';
+                     document.getElementById("canhan").innerHTML='<a href="page/trang_ca_nhan.html">Trang cá nhân</a>';
                   }
                </script>
             </li>	
@@ -95,25 +95,25 @@
       <div class="menufooter">
          <ul>
             <li class="footeritem">
-               <a href="/page/gioi_thieu.html" class="footeritem">About</a>
+               <a href="page/gioi_thieu.html" class="footeritem">About</a>
             </li>
             <li class="footeritem">
-               <a href="/page/trang_chu.html" class="footeritem">Sitemap</a>
+               <a href="page/trang_chu.html" class="footeritem">Sitemap</a>
             </li>
             <li class="footeritem">
-               <a href="/page/trang_chu.html" class="footeritem">Advertise</a>
+               <a href="page/trang_chu.html" class="footeritem">Advertise</a>
             </li>
             <li class="footeritem">
-               <a href="/page/trang_chu.html" class="footeritem">Privacy Policy</a>
+               <a href="page/trang_chu.html" class="footeritem">Privacy Policy</a>
             </li>
             <li class="footeritem">
-               <a href="/page/lien_he.html" class="footeritem">Contact</a>
+               <a href="page/lien_he.html" class="footeritem">Contact</a>
             </li>
          </ul>
       </div>      
       <div class="tg">
          <b>CREATED BY</b>
-         <a href="/page/trang_chu.html" id="tacgia">TEAMNT</a>
+         <a href="page/trang_chu.html" id="tacgia">TEAMNT</a>
       </div>
    </div>
 </body>
