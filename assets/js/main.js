@@ -15,7 +15,7 @@ function dangki(){
             alert(checkdk())
         }
         if(checkdk()==="" && mk1 === mk2){
-            window.location="/page/login.html";
+            setTimeout(function(){document.location.href = "../page/login.html"},500);
             alert('Đăng kí thành công!');
             adduser(id,mk2); 
             addlist(id);
@@ -41,7 +41,7 @@ function doimatkhau(){
                 alert('Mật khẩu mới không khớp!\nVui lòng kiểm tra lại mật khẩu!')
         }
         if(mk1 === mk2 && mk === mkdadangki){
-                window.location="../page/login.html";
+                setTimeout(function(){document.location.href = "../page/login.html"},500);
                 alert('Đổi mật khẩu thành công!');
                 adduser(id,mk2); 
                 ghils(id,Date(),'Đổi mật khẩu')
@@ -71,7 +71,7 @@ function dangnhap(){
     var mk = document.getElementById('mkdangnhap').value;
     var mkdadangki = localStorage.getItem(id);
     if(id === 'Admin' && mk === 'nghia@123'|| mkdadangki === mk){
-        window.location="../page/trang_ca_nhan.html";
+        setTimeout(function(){document.location.href = "../page/trang_ca_nhan.html"},500);
         alert('Đăng nhập thành công!');
         localStorage.setItem('phiendangnhap',id)
         ghils(id,Date(),'Đăng nhập tài khoản');
