@@ -136,16 +136,16 @@ function bvmd(){
     var nd8 = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam sunt deleniti doloremque eum suscipit vel sint iure placeat tempora nihil doloribus et, mollitia eligendi, ullam maxime veniam reprehenderit ad possimus!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam sunt deleniti doloremque eum suscipit vel sint iure placeat tempora nihil doloribus et, mollitia eligendi, ullam maxime veniam reprehenderit ad possimus!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam sunt deleniti doloremque eum suscipit vel sint iure placeat tempora nihil doloribus et, mollitia eligendi, ullam maxime veniam reprehenderit ad possimus!';
     var nd9 = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam sunt deleniti doloremque eum suscipit vel sint iure placeat tempora nihil doloribus et, mollitia eligendi, ullam maxime veniam reprehenderit ad possimus!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam sunt deleniti doloremque eum suscipit vel sint iure placeat tempora nihil doloribus et, mollitia eligendi, ullam maxime veniam reprehenderit ad possimus!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam sunt deleniti doloremque eum suscipit vel sint iure placeat tempora nihil doloribus et, mollitia eligendi, ullam maxime veniam reprehenderit ad possimus!';
     var nd10 = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam sunt deleniti doloremque eum suscipit vel sint iure placeat tempora nihil doloribus et, mollitia eligendi, ullam maxime veniam reprehenderit ad possimus!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam sunt deleniti doloremque eum suscipit vel sint iure placeat tempora nihil doloribus et, mollitia eligendi, ullam maxime veniam reprehenderit ad possimus!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam sunt deleniti doloremque eum suscipit vel sint iure placeat tempora nihil doloribus et, mollitia eligendi, ullam maxime veniam reprehenderit ad possimus!';
-    var ha1 = '/Image/ava-an-group-700x465.jpg'; 
-    var ha2 = '/Image/ava-4-cach-lam-tron-700x465.jpg'; 
-    var ha3 = '/Image/ava-3-cach-tinh-tong-700x465.jpg'; 
-    var ha4 = '/Image/ava-ham-minmax-700x465.jpg'; 
-    var ha5 = '/Image/ham-do-tim-700x465.jpg'; 
-    var ha6 = '/Image/ava-ham-chuoi-700x465.jpg'; 
-    var ha7 = '/Image/ava-ham-can-ban-700x465.jpg'; 
-    var ha8 = '/Image/ava-ham-sumifs-700x465.jpg'; 
-    var ha9 = '/Image/ava-ham-sumif-700x465.jpg'; 
-    var ha10 = '/Image/ava-ham-sum-700x465.jpg';    
+    var ha1 = 'ava-an-group-700x465.jpg'; 
+    var ha2 = 'ava-4-cach-lam-tron-700x465.jpg'; 
+    var ha3 = 'ava-3-cach-tinh-tong-700x465.jpg'; 
+    var ha4 = 'ava-ham-minmax-700x465.jpg'; 
+    var ha5 = 'ham-do-tim-700x465.jpg'; 
+    var ha6 = 'ava-ham-chuoi-700x465.jpg'; 
+    var ha7 = 'ava-ham-can-ban-700x465.jpg'; 
+    var ha8 = 'ava-ham-sumifs-700x465.jpg'; 
+    var ha9 = 'ava-ham-sumif-700x465.jpg'; 
+    var ha10 = 'ava-ham-sum-700x465.jpg';    
     if(localStorage.getItem('listha')){
         listha = JSON.parse(localStorage.getItem('listha'));
     }else{
@@ -238,12 +238,12 @@ function thembaiviet(){
     if(kq == true && tieude !== "" && noidung !== ""){
     
     if(checkdb()!== ""){
-        window.location="/page/trangdangbaiviet.html"
+        window.location="trangdangbaiviet.html"
         addbv(tieude,noidung);
         ghilscs(localStorage.getItem('phiendangnhap'),Date(),'Chỉnh sửa bài viết '+tieude,tieude);
     alert("Chỉnh sửa bài viết thành công")        
     }else{
-        window.location="/page/trangdangbaiviet.html"
+        window.location="trangdangbaiviet.html"
         addlistbv(tieude);
         addbv(tieude,noidung);
         listbvcongkhai(tieude);
@@ -340,7 +340,7 @@ function xemchitietbv(i){
     var nd = localStorage.getItem(listcongkhai[i]);
     ghils(localStorage.getItem('phiendangnhap'),Date(),'Xem bài viết '+listcongkhai[i])
     localStorage.setItem('phienbaiviet',td);
-    location.href='../page/chitietbaiviet.html'
+    location.href='chitietbaiviet.html'
 }
 function chitietbaiviet(){
     listcongkhai = JSON.parse(localStorage.getItem('listcongkhai'));
@@ -427,7 +427,7 @@ function xoa(i){
     }
 
     xoalistbv(i);
-    window.location="../../page/trangdangbaiviet.html";
+    window.location="trangdangbaiviet.html";
 }
 function xoalistbv(i){
     if(localStorage.getItem('listbv')){

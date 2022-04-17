@@ -25,7 +25,7 @@ function vattro(){
     return vt;
 }
 function chuyentrangdoimatkhau(){
-    window.location="/page/doimatkhau.html"
+    window.location="doimatkhau.html"
 }
 var lichsu = {
     user : "",

@@ -160,7 +160,7 @@ function phanadmin(i){
             ghils(localStorage.getItem('phiendangnhap'),Date(),'Xóa '+idremove+' khỏi danh sách admin')
             alert('Đã loại bỏ '+ idremove + ' ra khỏi danh sách Admin');
         }
-        window.location="../../page/setting.html";
+        window.location="setting.html";
         
     }
     
@@ -199,7 +199,7 @@ function phanbtv(i){
             ghils(localStorage.getItem('phiendangnhap'),Date(),'Xóa '+idremove+' khỏi danh sách biên tập viên')
             alert('Đã loại bỏ '+ idremove + ' ra khỏi danh sách Biên tập viên');
         }
-        window.location="../../page/setting.html";
+        window.location="page/setting.html";
         
     }
     
@@ -237,7 +237,7 @@ function phanuser(i){
             ghils(localStorage.getItem('phiendangnhap'),Date(),'Xóa '+idremove+' khỏi danh sách user')
             alert('Đã loại bỏ '+ idremove + ' ra khỏi danh sách User');
         }
-        window.location="../../page/setting.html";
+        window.location="setting.html";
         
     }
     
