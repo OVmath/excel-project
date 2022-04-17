@@ -15,13 +15,12 @@ function dangki(){
             alert(checkdk())
         }
         if(checkdk()==="" && mk1 === mk2){
-            window.location="../page/login.html";
+            window.location="/page/login.html";
             alert('Đăng kí thành công!');
             adduser(id,mk2); 
             addlist(id);
             addlistuser(id);
-            ghils(id,Date(),'Đăng kí tài khoản');
-            
+            ghils(id,Date(),'Đăng kí tài khoản');            
         }       
     }
 function doimatkhau(){

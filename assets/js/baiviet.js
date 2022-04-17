@@ -462,7 +462,7 @@ function ghiph(user,thoigian,baiviet,ykien){
     }else{
         phoi.push(phanhoi);
     alert('Gửi phản hồi thành công!!')
-    ghils(user,Date(),'Phản hồi bài viết'+phanhoi.baiviet);
+    ghils(user,Date(),'Phản hồi bài viết '+phanhoi.baiviet);
     localStorage.setItem('phanhoi',JSON.stringify(phoi))
     }
     
