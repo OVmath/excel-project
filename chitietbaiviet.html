@@ -37,10 +37,10 @@
          </li>
       </ul>	
       <script>
-         if(localStorage.getItem('phiendangnhap').value !== ""){
+         if(localStorage.getItem('phiendangnhap') !== null){
             document.getElementById('user').innerHTML=localStorage.getItem('phiendangnhap');
             document.getElementById('user').href="trang_ca_nhan.html";
-            document.getElementById('out').innerHTML='Đăng xuất';
+            document.getElementById('out').innerHTML='Đăng xuất';            
          }
       </script>	
    </div>
@@ -58,6 +58,17 @@
             </tr>
          </table>
       </form>
+      <script>
+         if(localStorage.getItem('phiendangnhap') == null){
+            var a = confirm("Đăng nhập tài khoản để phản hồi bài viết này!!!");
+            if(a == true){
+               setTimeout(function(){document.location.href = "login.html"},100);
+            }
+            document.getElementById("formphanhoi").innerHTML=""
+            
+         }
+         // alert(localStorage.getItem('phiendangnhap')==null)
+      </script>
    </div>
    <div id="footer">
       <hr>

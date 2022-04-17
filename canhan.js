@@ -88,6 +88,42 @@ function xemls(user){
     }
     return tb;
 }
+function xemcb(){
+    var user = localStorage.getItem("phiendangnhap");
+    if(localStorage.getItem('cb')){
+        kh = JSON.parse(localStorage.getItem('cb'));
+    }else{
+        kh = [];
+    }
+    var tb ="";
+    
+    for(var i = 0; i < kh.length;i++){
+        var anh = kh[i].logo;
+        var row = '<tr><td class="baiviet" width="100px" height="100px"><img src="'+anh+'" style="width: 400px" alt="Preview" id="imgPreview" ></td><td class="baiviet"><h2>'+kh[i].tieude+'</h2><br><p style="font-size: 20px;">'+kh[i].noidung+'</p></td></tr>';
+       tb+=row;
+    }
+    return tb;
+}
+function xemnc(){
+    var user = localStorage.getItem("phiendangnhap");
+    if(localStorage.getItem('nc')){
+        kh = JSON.parse(localStorage.getItem('nc'));
+    }else{
+        kh = [];
+    }
+    var tb ="";
+    
+    for(var i = 0; i < kh.length;i++){
+        var anh = kh[i].logo;
+        var row = '<tr><td class="baiviet" width="100px" height="100px"><img src="'+anh+'" style="width: 400px" alt="Preview" id="imgPreview" ></td><td class="baiviet"><h2>'+kh[i].tieude+'</h2><br><p style="font-size: 20px;">'+kh[i].noidung+'</p></td></tr>';
+       tb+=row;
+    }
+    return tb;
+}
+// function ctcb(i){
+//     ghils(localStorage.getItem('phiendangnhap'),Date(),'Xem bài viết '+i)
+//     localStorage.setItem('phienbaiviet',i);
+// }
 function xemph(){
     if(localStorage.getItem('phanhoi')){
         phoi = JSON.parse(localStorage.getItem('phanhoi'));

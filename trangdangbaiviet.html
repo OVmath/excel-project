@@ -75,12 +75,8 @@
               <td>Thuộc khóa học</td>
               <td><select name="" id="khoahoc">
                <option value="Công khai">Công khai</option>
-                 <option value="Cơ bản 1">Cơ bản 1</option>
-                 <option value="Cơ bản 2">Cơ bản 2</option>
-                 <option value="Cơ bản 3">Cơ bản 3</option>
-                 <option value="Nâng cao 1">Nâng cao 1</option>
-                 <option value="Nâng cao 2">Nâng cao 2</option>
-                 <option value="Nâng cao 3">Nâng cao 3</option>                 
+                 <option value="Cơ bản">Cơ bản</option>
+                 <option value="Nâng cao">Nâng cao</option>              
               </select></td>
            </tr>
            <tr>
@@ -88,18 +84,7 @@
             <td>
                <input type="file" id="myFileInput" onchange="hienanh(event)">
                <img id="output" style="margin-bottom: -22px;"/>
-               <script>
-         document.querySelector("#myFileInput").addEventListener("change", function (){
-        // console.log(this.files);
-        var tieude = document.getElementById('tieude').value;
-        const reader = new FileReader();
-        reader.addEventListener("load", () => {
-            console.log(reader.result);
-            localStorage.setItem(tieude+'a', reader.result);
-        });
-        reader.readAsDataURL(this.files[0]);
-    });
-               </script>
+               
             </td>
         </tr>
            <tr>
@@ -107,7 +92,25 @@
                <td rowspan="2">
                   <textarea id="noidung" placeholder="Nhập nội dung bài viết vào đây." required="required"></textarea>
                </td>
-               <td class="td"><button onclick="thembaiviet()">Đăng bài</button></td>
+               <td class="td"><button onclick="thembaiviet()" id="dangbai">Đăng bài</button></td>
+               <script>
+                  document.querySelector("#myFileInput").addEventListener("change", function (){
+                 // console.log(this.files);
+                 var tieude = document.getElementById('tieude').value;
+                 var noidung = document.getElementById('noidung').value;
+                 const reader = new FileReader();
+                 reader.addEventListener("load", () => {
+                     // console.log(reader.result);
+                     if(document.getElementById('khoahoc').value=="Cơ bản"){
+                           ghicb("Admin",tieude,noidung,reader.result)
+                     }else{
+                        ghinc("Admin",tieude,noidung,reader.result)
+                     }
+                     localStorage.setItem(tieude+'a', reader.result);
+                 });
+                 reader.readAsDataURL(this.files[0]);
+             });
+                        </script>
            </tr>
            <tr>
               <td></td>

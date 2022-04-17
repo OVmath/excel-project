@@ -53,21 +53,21 @@
 					<a href="bai_viet.html" class="dropbtn">Danh mục</a>
 					<div class="dropdown-content">    <!-- Menu đa cấp -->
                   <ul>
-                   <li class="level2"><a href="coban.html">Cơ bản</a>
-                        <ul>
-                           <li><a href="">Cơ bản 1</a></li>
-                        <li><a href="">Cơ bản 2</a></li>
-                        <li><a href="">Cơ bản 3</a></li>
-                        </ul>
-                   </li>
-                   <li class="level2"><a href="nangcao.html">Nâng cao</a>
-                        <ul>
-                           <li><a href="">Nâng cao 1</a></li>
-                           <li><a href="">Nâng cao 2</a></li>
-                           <li><a href="">Nâng cao 3</a></li>
-                        </ul>
-                   </li>
-                  </ul>
+                     <li class="level2"><a href="coban.html">Cơ bản</a>
+                          <ul>
+                             <li><a href="coban.html">Cơ bản 1</a></li>
+                             <li><a href="coban.html">Cơ bản 2</a></li>
+                             <li><a href="coban.html">Cơ bản 3</a></li>
+                          </ul>
+                     </li>
+                     <li class="level2"><a href="nangcao.html">Nâng cao</a>
+                          <ul>
+                             <li><a href="nangcao.html">Nâng cao 1</a></li>
+                             <li><a href="nangcao.html">Nâng cao 2</a></li>
+                             <li><a href="nangcao.html">Nâng cao 3</a></li>
+                          </ul>
+                     </li>
+                    </ul>
               </div>           
 				  </li>	
 				  <li><a href="bai_viet.html">Bài viết</a></li>	
@@ -84,10 +84,17 @@
            </div>
    </div>  
    <hr>
-   <table  id="baiviettrangchu">
+   <table id="dscb" border="1px">
       <script>
-          var html = hienthibaivietck();
-          document.getElementById("baiviettrangchu").innerHTML=html              
+            var html = xemcb();
+          document.getElementById("dscb").innerHTML=html              
+      </script>
+   </table>
+   <table id="dsuser" border="0px">
+      <hr>
+      <script>
+            var html = hienthibaivietcb();
+          document.getElementById("dsuser").innerHTML=html              
       </script>
    </table>
    <div id="footer">
