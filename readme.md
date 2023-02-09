@@ -1,6 +1,6 @@
 # Website About Excel
 
-Demo: [https://github.com/NGHIA64/excel-project/new/main](https://github.com/NGHIA64/excel-project/new/main)
+Demo: [https://nghia64.github.io/excel-project/](https://nghia64.github.io/excel-project/)
 
 # Technology
 
