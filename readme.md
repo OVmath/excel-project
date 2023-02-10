@@ -13,6 +13,6 @@ Demo: [https://nghia64.github.io/excel-project/](https://nghia64.github.io/excel
 
 - Username: Admin
 
-- Passwork: nghia@123
+- Password: nghia@123
 
 
